@@ -1,0 +1,1 @@
+cmd /K whisper "C:\Users\King\Desktop\software engineering\software engineering lecture 7 watermarked.mkv" --language English --model medium --device cuda --task translate

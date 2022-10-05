@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Automation of Applications Through CMD/1.0.0": {
+        "runtime": {
+          "Automation of Applications Through CMD.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Automation of Applications Through CMD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

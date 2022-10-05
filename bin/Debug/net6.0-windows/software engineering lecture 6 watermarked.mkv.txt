@@ -1,0 +1,546 @@
+Hello dear students, welcome to lecture 6 of software engineering course.
+So the today's topic is architectural design.
+Let's start.
+These below topics are covered in today's lectures.
+Architectural design decisions.
+Architectural views.
+Architectural patterns.
+Application architectures.
+Software architecture.
+The design process for identifying the subsystems making up a system and the framework for subsystem control and communication is architectural design.
+The output of this design process is a description of the software architecture.
+Okay, so what is the architectural design?
+It is the design process for identifying the subsystems making up a system and the framework for subsystem control and communication.
+So architectural design is about the systems that composes our system systems and frameworks.
+Okay, and the output of this design process is a description of software architecture.
+Architectural design.
+An early stage of the system design process represents the link between specification and design processes.
+Often carried out in parallel with some specification activities.
+It involves identifying major system components and their communications.
+Okay.
+The architecture of a packing robot control system.
+So let's see the architecture of a pattern robot.
+Okay, it has vision system of course to identify the packages.
+And it has object identification system which is dependent on the vision system.
+And from the combination of vision system and object identification system, there is arm control system and grip control system.
+By the way, these arm control and grip control system also takes input from packaging selection system and packaging system.
+And the packaging selection system and picking system takes input from object identification system.
+So we can analyze it like this.
+First robot series is environment.
+Then this environment data, the image is sent to the object identification system.
+Then object identification system determines which packages will be selected to pack.
+Okay.
+And then they need to pack it and to pack them.
+Or let's say to pack the sorting objects to selected objects.
+Packing system sends data to the arm control and grip control.
+And arm control and grip control uses vision system and object identification system to pack those packages.
+Okay.
+And there is also conveyor control which also sends output to the image also takes input from packing system.
+Architectural abstraction.
+Architecture in the small is concerned with the architecture of individual programs.
+At this level, we are concerned with the way that an individual program is decomposed into components.
+Architecture in the large is concerned with the architecture of complex enterprise systems that include other systems, programs and program components.
+These enterprise systems are distributed over different computers which may be owned and managed by different companies.
+Advantage of explicit architecture.
+Stakeholder communication.
+Architecture may be used as a focus of discussion by system stakeholders.
+System analysis.
+Means that analysis of whether the system can meet its non-functional requirements as possible.
+Large scale reuse.
+The architecture may be reusable across a range of systems.
+Product line architectures may be developed.
+Architectural representations.
+Simple, informal block diagrams showing entities and relationships are the most frequently used method for documenting software architectures.
+Okay.
+So simple, informal block diagrams are used in mostly.
+But these have been criticized because they lack semantics.
+Do not show the types of relationships between entities nor the visible properties of entities in the architecture.
+However, this method has been criticized by the size of it.
+Depends on the use of architectural models.
+The requirements for model semantics depends on how the models are used.
+Box and line diagrams.
+Very abstract, they do not show the nature of component relationships nor the externally visible properties of the subsystems.
+However, useful for communication with stakeholders and for project planning.
+Use of architectural models.
+As a way of facilitating discussion about the system design.
+A high level architectural view of a system is useful for communication with system stakeholders and project planning because it is not cluttered with detail.
+Stakeholders can relate to it and understand an abstract view of the system.
+They can then discuss the system as a whole without being confused by detail.
+So it is really important to have architectural model to discuss it with the stakeholders.
+So what? Who has stakeholders if you remember it?
+Let's look for a formal definition of it.
+In simple words, anyone having any type of relation, interest in the project is known as stakeholder.
+The term software project stakeholder refers to a person, group or company that is directly or indirectly involved in the project and who may affect or get affected by the outcome of the project.
+What is stakeholder identification?
+It is the process of identifying a person, group or a company which can affect or get affected by a decision, activity or the outcome of the software project.
+It is important in order to identify the exact requirements of the project and what various stakeholders are expecting from the project outcome.
+Okay, so you see stakeholders are categorized into two categories. First one is internal stakeholder and second one is external stakeholder.
+So project manager project team, company founders are internal stakeholders and external stakeholders are customers, government, supply and such.
+You see even the developer can be a stakeholder because they are also taking part of.
+They are also taking part in the team.
+Okay, for example, project managers.
+Responsible for managing the whole project. Project manager is generally never involved in producing the end product, but he controls monitors and manages the activities involved in the production.
+It forms the actual work of the project under the project manager, including development, testing, etc.
+Okay, so now you have you get the idea. So with architectural model, it is much easier to discuss the project with stakeholders.
+It can be developer, it can be the company staff, it can be project manager, it can be clients, external buyers and such.
+As a way of documenting an architecture that has been designed.
+The aim here is to produce a complete system model that shows the different components in a system, their interfaces and their connections.
+Architectural design decisions.
+Architectural design is a creative process so the process differs depending on the type of system being developed.
+Okay, this is important the type of system. In software engineering, it is always important the type of system that you are going to build.
+Okay, you have to consider that every time, in every case.
+However, a number of common decisions span all design processes and these decisions affect the non-functional characteristics of the system.
+Architectural design decisions.
+Is there a generic application architecture that can be used?
+How will the system be distributed?
+What architectural styles are appropriate?
+What approach will be used to structure the system?
+How will the system be decomposed into modules?
+What control strategy should be used?
+How will the architectural design be evaluated?
+How should the architecture be documented?
+Architecture is used.
+Systems in the same domain often have similar architectures that reflect domain concepts.
+Application product lines are built around a core architecture with variants that satisfy particular customer requirements.
+Architecture of a system may be designed around one of more architectural patterns or styles.
+These capture the essence of an architecture and can be instantiated in different ways.
+Discussed later in this part.
+Architecture and system characteristics.
+Performance.
+Localize critical operations and minimize communications.
+Use large rather than fine grain components.
+For performance, localize critical operations and minimize communications.
+Which means that you won't be wasting resources or time to get down your operations and communications in other perhaps platform or on others.
+Services and such.
+Use a layered architecture with critical assets in the interlayers.
+Localize safety critical features in a small number of subsystems.
+Include redundant components and mechanisms for fault tolerance.
+Use fine grain, replaceable components.
+OK, so what does fine grain means?
+OK, so some has already asked it.
+OK, that is a question in solving an engineering step exchange column.
+This should have the best answer I believe.
+Courser and finer grain means implementing more or less functionality respectively.
+It is somewhat related to the size too.
+So a fine grain, service is something that does very little.
+Like a service that just multiples two numbers, a course grain service is something that does something more complex like booking a room in a hotel.
+A medium grain service is usually something near the middle of this scale.
+Like a service that books only the money from your credit card but doesn't do anything else.
+It is very much subjective of course and depends on the scales involved in your project.
+What he is saying there if you use finer grain services objects then obviously you need to communicate more because you need to speak to more services objects.
+This also means that you are exposed to a lot more knowledge because you have to understand some data and the choreography between calls.
+OK.
+So if we use fine grain replaceable components that means if something near is necessarily we can replace it with a better one and the whole system will continue to operate as it is positive to be.
+Architectural views.
+OK. I think it is related to this one.
+What views are perspectives are useful when designing and documenting a system's architecture?
+What notations should be used for describing architectural models?
+Each architectural model only shows one view or perspective of the system.
+It might show how a system is decomposed into modules, how the runtime processes interact are the different ways in which system components are distributed across a network.
+For both design and documentation you usually need to present multiple views of the software architecture.
+Four plus one view model of software architecture.
+A logical view which shows the key abstractions in the system as objects or object classes.
+A process view which shows how at runtime the system is composed of interacting processes.
+A development view which shows how the software is decomposed for development.
+A physical view which shows the system hardware and how software components are distributed across the processors in the system.
+Related using use cases or scenarios plus one.
+OK, so there are four main views which are a logical view, a process view, a development view and a physical view.
+Architectural patterns.
+Patterns are a means of representing, sharing and reusing knowledge.
+An architectural pattern is a stylized description of good design practice which has been tried and tested in different environments.
+Patterns should include information about when they are and when the air not useful.
+Patterns may be represented using tabular and graphical descriptions.
+The model view controller MVC pattern.
+MVC pattern is very popular in the software development in the recent years.
+For example, there is a framework called as S without that MVC.
+So the MVC framework, MVC approach is getting the new trend of software development.
+Model view controller, usually known as MVC, is a software design pattern, one commonly used for developing user interfaces that divides the related program logic into three interconnected elements.
+This is done to separate internal representations of information from the ways information is presented to and accepted from the user, two, three.
+Traditionally used for desktop graphical user interfaces, GUIs, this pattern has become popular for designing web applications, for popular programming languages like JavaScript, Python, object Pascal, Delphi, Ruby, PHP, Java, C-Sharp and Swift have MVC frameworks that are used for web or mobile application development straight out of the box.
+Okay, so using there is model updates view and from the view is displayed to the user, then user uses the view and these use which goes to the controller, control the marketplace, the model and it updates the view and such.
+This is the how the model works.
+Let's read each of them. So the model is.
+The central component of the pattern. It is the applications dynamic data structure independent of the user interface, five it directly manages the data logic and rules of the application.
+So the model is the part which communicates with database which updates the alerts in source select database and such other things so the view is.
+Any representation of information such as a chart, diagram or table.
+Multiple views of the same information are possible, such as a bar chart for management and a tabular view for accountants.
+Accepts input and converts it to commands for the model or view, six.
+In addition to dividing the application into these components, the model view controller design defines the interactions between them.
+The model is responsible for managing the data of the application.
+It receives user input from the controller. The view means presentation of the model in a particular format.
+The controller responds to the user input and performs interactions on the data model objects.
+The controller receives the input, optionally validates it and then passes the input to the model.
+As with other software patterns, MVC expresses the core of the solution to a problem while allowing it to be adapted for each system.
+Eight particular MVC designs can vary significantly from the traditional description here.
+Okay, so let's read the MVC pattern of our example.
+So the description.
+It says views 93.
+Separates presentation and interaction from the system data.
+The system is structured into three logical components that interact with each other.
+The model component manages the system data and associated operations on the data.
+The view component defines and manages how the data is presented to the user.
+The controller component manages user interaction, e.g., key presses, mouse clicks, etc.
+And passes these interactions to the view and the model.
+Okay, so.
+Figure 6.4 shows the architecture of a web-based application system organized using the MVC pattern.
+Let's go to this here and we will show that.
+Used when there are multiple ways to view and interact with data. Also used when the future requirements for interaction and presentation of data are unknown.
+It allows the data to change independently of its representation and vice versa.
+Supports presentation of the same data in different ways with changes made in one representation shown in all of them.
+This is really important. For example, think about that you are developing a software for an Android application and iOS application web application and win those client-based applications.
+You can use the model in every one of them.
+Okay, only the view and the controller will change because how you interact with the software depends on the platform.
+You are using however the model can stay perfectly same for every one of them.
+And it would make your job much, much easier to manage all of the platforms at once.
+Can involve additional code and code complexity when the data model and interactions are simple?
+This is to doing a website, for example, in MEC pattern is really harder than doing just in a single page.
+Okay, so there is controller which does maps user actions to the model of this selects weave.
+And it goes to the change tag.
+Okay, it changed the state of the model and encapsulates application state of the first wave of state changes.
+And then this goes to the change notification to the weave.
+Then the model requires model updates since user events controller. So the weave feed-based model as well state query and controller feed-based weave with wave selection and weave feed-based controller with user events.
+Okay, and there is also a change of notification.
+So this is how an MEC of web page.
+Or this is more like a general MEC model. And there is the application architecture using MEC pattern.
+So there is a browser. For example, this is a browser, this is Chrome browser.
+And from browser, we control the events events with controller, HTTP request processing, application specific logic data validation.
+And from there, we update the request and it goes to our model, business logic database.
+And when model is updated, it sends change notification to the weave.
+And the can also make a refresh request.
+And from the dynamic page generation for management and from the video user events.
+So this is how it is done.
+From to display.
+I will give an example what could be the weave events and controllers from Toro's editor.
+Okay, so this is our weave.
+Things we see. When I do an event, it will go to the controller to update the model.
+Model is the data I am seeing on my screen.
+So for example, from weave, when I click this one, it will go to the controller and controller will load the need data.
+And when we request model to update and model will update need data. And when need data is updated, it will be reflected back to the weave.
+So I am clicking this for example.
+So the click event was the job of the controller, then control the requested model to update data and data of the model is updated.
+And then the weave is reflected with the name is data as you can see.
+I am not saying that this website was done in MBC framework. However, if you have coded this website in MBC, it would work like this.
+Okay.
+In the next semester, I am hopefully going to give the lectures the course of ASVDAT that MBC with.NET Core 5.
+So please subscribe and wait for that course if you are interested in MBC and web design.
+What do we do?
+Layered Architecture.
+Use to model the interfacing of subsystems.
+Organizes the system into a set of layers or abstract machines each of which provide a set of services.
+Supports the incremental development of subsystems in different layers when a layer interface changes only the adjacent layer is affected.
+However, often artificial to structure systems in this way.
+Okay. I will take a pause for a moment.
+All right. So, the layer that architecture pattern in the tabular view, name and layer architecture description.
+Organizes the system into layers with related functionality associated with each layer. A layer provides services to the layer above it so the lowest level layers represent core services that are likely to be used throughout the system.
+See figure 6.6.
+Okay. We will see those figures.
+Layered model of a system for sharing copyright documents held in different libraries as shown in figure 6.7.
+Used when building new facilities on top of existing systems when the development is spread across several teams with each team responsibility for a layer of functionality when there is a requirement for multi-level security.
+So working as a separate teams is like a mandatory thing for the corporate software.
+I mean the corporate level software because when you are working in a big software, a professional software, a small single team would have hard time to complete it.
+For you have to have multiple teams, you may compose a single team which is very big. However, a single team with a lot of developers would be harder to manage.
+So best way is composing several teams based on the developers experience and assigning them to the particular layers based on their expertise and such.
+So advantages of layered architectures.
+Allows replacement of entire layers so long as the interface is maintained.
+Redundant facilities, EG, authentication can be provided in each layer to increase the dependability of the system.
+In practice, providing a clean separation between layers is often difficult and a high-level layer may have to interact directly with lower-level layers rather than through the layer immediately below it.
+Performance can be a problem because of multiple levels of interpretation of a service request as it is processed at each layer.
+So a generic layered architectures, usually there is user interface at the highest level. Using interface management authentication on authorization, one layer below user interface.
+And under it, core business logic, application functionality, system utilities, and at the very lower layer system support, operation system database and such.
+So the architecture of a library system, let's see the minimum management system, okay.
+So there is a web browser interface which the users clients interact with the system in this layer than there is logging forms and query manager and period manager layers.
+So this layer handles all these three different operations.
+And under that there is distributive search document retrieval, write manager and accountant.
+So actually all layers, under the browser interface, are usually at the server site, okay.
+For perhaps the print manager can be at the client site, forms and query manager can be at the client site, but put need verification at the server site.
+And login will be of course at the server site.
+And the distributive search document retrieval, write manager, accounting, and under that there is library index and under that there are databases.
+So the key points of so far.
+Let's see the.
+A software architecture is a description of how a software system is organized.
+Architectural design decisions include decisions on the type of application, the distribution of the system, the architectural styles to be used.
+Architectures may be documented from several different perspectives or views such as a conceptual view, a logical view, a process view and a development view.
+Architectural patterns are a means of reusing knowledge about generic system architectures.
+They describe the architecture, explain when it may be used and describe its advantages and disadvantages.
+Okay, so lecture six architectural design part two, okay, let's start.
+Repository architectures.
+Subsystems must exchange data. This may be done in two ways.
+Okay, so the first day.
+Shared data is held in a central database or repository and may be accessed by all subsystems.
+Each subsystem maintains its own database and passes data explicitly to other subsystems.
+When large amounts of data are to be shared, the repository model of sharing is most commonly used that this is an efficient data sharing mechanism.
+So yes, having a central database or repository is better when there are large amounts of data, because let's say you have hundreds subsystems and if they maintain their own databases,
+that will cause a lot of unnecessary resources to use it and perhaps the synchronization issues and such.
+So having a single central database is better and more common solution.
+The repository pattern.
+Okay, so the description of the repository pattern is.
+All data in a system is managed in a central repository that is accessible to all system components.
+Components do not interact directly only through the repository.
+Okay, so the example.
+Figure 6.9 is an example of an eye where the components use a repository of system design information.
+Each software tool generates information which is then available for use by other tools.
+Okay, when it is user, when is repository is user.
+You should use this pattern when you have a system in which large volumes of information are generated that has to be stored for a long time.
+You may also use it in data driven systems where the inclusion of data in the repository triggers an action or tool.
+Components can be independent. They do not need to know of the existence of other components.
+Changes made by one component can be propagated to all components.
+All data can be managed consistently e.g. backups done at the same time as it is all in one place.
+So what are the disadvantages which is also important factor to take into consideration?
+The repository is a single point of failure.
+Problems in the repository affect the whole system.
+Maybe inefficiencies in organizing all communication through the repository.
+Distributing the repository across several computers may be difficult.
+Yes, okay.
+So this single point of failure is an important fact.
+Therefore, you have to have proper backups, proper failures, let's say scenarios to be prepared.
+Okay, so it is not all about advantages, but also there are disadvantages that you have to consider.
+So a repository architecture for an IDA integrated development environment such as Visual Studio.
+So there is design translators, UML editors, code generators, project repository, design analyzers, and the purchase generator, Python editor and Java editors.
+So this is based on the design for this particular IDA IDA.
+You see this project repository.
+Actually, we are also having a repository for our courses, which is, we should already know it.
+I will be posting everything here.
+I am also posting currently and your final project will be also uploaded to here, the details of it.
+So you see, for every lecture, I have separate repository.
+I am updating them, uploading them with this way.
+So to those are able to get whatever I share within a synchronization.
+And we will continue.
+I also have private repositories for my own projects and they are extremely useful.
+Client server architecture.
+Distributed system model, which shows how data and processing is distributed across a range of components.
+Can be implemented on a single computer?
+Set of standalone servers, which provides specific services such as printing, data management, etc.
+Set of clients, which call on these services.
+Network, which allows clients to access servers?
+Client server architecture is mandatory.
+If you are going to have security requirements.
+For example, you have a subscription based system.
+For practically, for almost every online tool, you need client server architecture.
+What I mean is, if you are selling a product that requires online authentication or online data saving or something,
+that is online, if it is not just offline stand-alone application, you have to have a server which will process
+the sensitive information at server site.
+Such as keep to database there or such as make the authentication and everything or make the database connections.
+You have to have a server site running application.
+And then there will be of course a client site application such as web sites or Windows-based applications.
+However, all of them will communicate with that server site sort of way as well.
+The client server pattern.
+In a client server architecture, the functionality of the system is organized into services with each service delivered from a separate server.
+Clients are users of these services and access servers to make use of them.
+Of course, you can have separate server or you can have single server.
+However, if it is client server pattern, you should have separate server for each service.
+Like print service or like authentication service or other things.
+Figure 6.11 is an example of a film and video DVD library organized as a client server system.
+Used when data in a shared database has to be accessed from a range of locations.
+Because servers can be replicated, may also be used when the load on a system is variable.
+The principle advantage of this model is that servers can be distributed across a network.
+General functionality, EG, a printing service can be available to all clients and does not need to be implemented by all services.
+Each service is a single point of failure so susceptible to denial of service attacks or server failure.
+Performance may be unpredictable because it depends on the network as well as the system.
+Maybe management problems if servers are owned by different organizations.
+Okay, you see this denial of service attack. These are pretty severe threats to your servers and having multiple servers will increase the protection cost.
+Therefore, this is a truly disadvantage. Single point of failure is true about it is true for everything and unless you have redundant servers or services.
+Management is also a problematic issue.
+So you have to decide yourself whether to have multiple servers for multiple services or have single servers it's up to you.
+A client server architecture for a film library.
+Okay, so there are clients which are being users or customers and there is internet and then each client can connect each one of these services.
+So one client can access catalog service, library catalog. The other one can access video server, film store.
+The other one can access picture server, photo store or the other one can access their server, film rent, photo information.
+So you see each category of information have been separated has been separated into different servers.
+This can have another advantage. For example, one client wants to be a video server and another one wants to be a picture server and picture server gets down.
+And in that case, only client three would be affected. So client two can have its service as expected.
+Okay.
+Pipe and filter architecture.
+Functional transformations process their inputs to produce outputs may be referred to as a pipe and filter model as in Unix shell.
+Variants of this approach are very common.
+When transformations are sequential, this is a batch sequential model which is extensively used in data processing systems.
+Not really suitable for interactive systems.
+Okay. So let's get more information to understand this better. So the pipe and filter pattern. So let's read the description.
+The processing of the data in a system is organized so that each processing component filter is discrete and carries out one type of data transformation.
+The data flows as in a pipe from one component to another for processing.
+Figure 6.13 is an example of a pipe and filter system used for processing invoices.
+Commonly used in data processing applications, both batch and transaction based where inputs are processed in separate stages to generate related outputs.
+Easy to understand and supports transformation reuse.
+Workflow style matches the structure of many business processes.
+Evolution by adding transformations is straightforward.
+Can be implemented as either a sequential or concurrent system.
+The format for data transfer has to be agreed upon between communicating transformations.
+Each transformation must parse its input and unpars its output to the agreed form.
+This increases system overhead and may mean that it is impossible to reuse functional transformations that use incompatible data structures.
+Okay. So that is an example of the pipe and filter architecture.
+So pipe and filter in this example is used for invoices.
+So there is invoices incoming and they are read issued invoices, identify payments and there is also payments.
+And then issued receipts and find payments due issued receipts are going to receive and find payments due is going issue payments reminder and then it goes to the reminders.
+So there is a piping and filtering as you can see.
+Application architectures.
+Application systems are designed to meet an organizational need.
+As businesses have much in common, their application systems also tend to have a common architecture that reflects the application requirements.
+A generic application architecture is an architecture for a type of software system that may be configured and adapted to create a system that meets specific requirements.
+Use of application architectures.
+As a starting point for architectural design, as a design checklist, as a way of organizing the work of the development team,
+as a means of assessing components for reuse, as a vocabulary for talking about application types.
+Examples of application types.
+Data processing applications.
+Data driven applications that process data in batches without explicit user intervention during the processing.
+Transaction processing applications.
+Data centered applications that process user requests and update information in a system database.
+Event processing systems.
+Applications where system actions depend on interpreting events from the system's environment.
+Language processing systems.
+Applications where the user's intentions are specified in a formal language that is processed and interpreted by the system.
+OK, so that's a processing of locations. Let's give an example of each one of these.
+I think they are given in the following slides.
+Application type examples.
+Focus here is on transaction processing and language processing systems.
+Transaction processing systems.
+E-commerce systems.
+Reservation systems.
+Language processing systems.
+Compilers and commands.
+Interpreters, I think I will also give an example to data processing applications.
+For example, Google has data processing applications.
+Let's say when they crawl websites, they are doing batch data processing.
+So they are one of their type of application is data processing applications.
+So for transaction processing applications, they are data centered applications.
+And that process is used to request and update information in a system database.
+For example, Facebook has transaction processing applications.
+For event processing applications, I think autonomous cars or any system that is autonomous can be given.
+Because they are processing the environment input.
+So whatever happens, they are taking action based on what example you are.
+Your car is moving on the street and then a car appears in front of you.
+It is coming from another direction or it is starting to move when it was stationary.
+That is event processing, event processing application.
+And also there is language processing systems.
+For example, this text to speech is also language processing system.
+The opposite is also same.
+As you know, we are already generating subtitles for our videos.
+In that case, it is converting speech into the text.
+So it is all there are both language processing systems.
+Okay, let's continue. Okay, we have read it.
+Transaction processing systems.
+Process user requests for information from a database or requests to update the database.
+From a user perspective, a transaction is.
+Any coherent sequence of operations that satisfies a goal.
+For example, find the times of flights from London to Paris.
+Users make asynchronous requests for service which are then processed by a transaction manager.
+Okay, so the structure of transaction processing applications.
+Input output processing which gets the input from the user.
+Application logic which turns the user input into the set of commands.
+The transaction manager and database.
+You see they are all double sided.
+So transaction manager takes information from database and also sends information to database.
+Same applies to all of them.
+Okay, the software architecture of an ATM system.
+So ATM system ATMs are the machines that we sent money or withdraw money or receive money and such.
+So what are the inputs of an ATM?
+Get customer account ID. We enter our, we may use cart.
+We can do cart based transaction or we can do online based transaction.
+So it can get customer account ID or validate cart.
+And after these are done, then we select the service.
+We are going to send money or receive money or withdraw money.
+And our service request is processed by query account and update account.
+Then output is the print details, return cart and dispense cash.
+Okay, this is so simplistic overview of the system.
+It is actually much more complex here than this of course.
+Information systems architecture.
+Information systems have a generic architecture that can be organized as a layered architecture.
+These are transaction based systems as interaction with these systems generally involves database transactions.
+So the layers include the user interface, user communications, information retrieval system database.
+Okay, for example Google is an information system, Google search, I mean.
+It has user interface, user communications, information system database.
+Okay, layers of information system architecture. There is user interface, user communications, authentication and authorization.
+Information retrieval and modification transaction management database.
+The architecture of mental health care, pension management system.
+So there is web browser.
+Then you do login after login, it system does roll checking and then form and menu manager appears based on your roll.
+And when you enter data or update data or delete data, the data information is done.
+And in the lower level, there is security management, pension information managers.
+Data important, export and report generation.
+And at the very low level transaction management, pension database system.
+Okay.
+Web-based information systems.
+Information and resource management systems are now usually web-based systems where the user interfaces are implemented using a web browser.
+Why do you think this is becoming a need standard? Because web pages are available almost every device.
+And when you update the web service, it is updated with all of the devices.
+Okay.
+So it is much easier to manage and update.
+For example, e-commerce systems are internet-based resource management systems that accept electronic orders for goods or services and then arrange delivery of these goods or services to the customer.
+In an e-commerce system, the application-specific layer includes additional functionality supporting a shopping cart in which users can place a number of items in separate transactions.
+Then pay for them all together in a single transaction.
+Server implementation.
+These systems are often implemented as multi-tier client server architectures.
+The web server is responsible for all user communications with the user interface implemented using a web browser.
+The application server is responsible for implementing application-specific logic as well as information storage and retrieval requests.
+The database server moves information to and from the database and handles transaction management.
+Language processing systems.
+Accept a natural or artificial language as input and generate some other representation of that language.
+May include an interpreter to act on the instructions in the language that is being processed.
+Used in situations where the easiest way to solve a problem is to describe an algorithm or describe the system data.
+Meta case tools process tool descriptions, method rules, etc. and generate tools.
+The architecture of a language processing system.
+OK, so there is source language instructions, then there is translators.
+Check syntax check somebody's generate and there is an abstract and see instructions, then there is interpreter which fetches and execute data and then results are provided to the user.
+Compiler components.
+Electrical analyzer which takes input language tokens and converts them to an internal form.
+A symbol table which holds information about the names of entities, variables, class names, object names, etc. used in the text that is being translated.
+A syntax analyzer which checks the syntax of the language being translated.
+A syntax tree which is an internal structure representing the program being compiled.
+A semantic analyzer that uses information from the syntax tree and the symbol table to check the semantic correctness of the input language text.
+A code generator that walks the syntax tree and generates abstract machine code.
+OK, so what is a compiler compiler? I mean what is a compiler?
+Compilers are source values that converts the code into the machine code.
+So machine can process that information. So let's give a more example.
+I will give an example of C sharp compiler.
+OK, so we write our code like this which is written in the English as you can see.
+And then this code has to be compiled into the machine record.
+OK, the machine cannot handle this.
+What machine can handle is the CPU supporting commands.
+So, and...
+OK, let's read this.
+Have you ever wondered what happens to your C sharp code when it runs on your computer?
+Probably not, but it's worth a look.
+A long time ago, when computer programming was in its infancy, programmers wrote programs in machine codes, language that the processor could understand.
+It looked like this.
+OK, yes, this is the machine code.
+And one upper level of machine code is the assembly code.
+Not exactly the easiest read, right? When writing machine codes, you tell the processor the exact address of the memory location at which to read and write data.
+Every command is represented by a number, and because that isn't complicated enough, commands differ among different processors.
+This is true.
+Therefore, AMD is paying money to Intel for the 6 instructions set.
+So, they can both run the windows on them.
+To avoid this complexity, clever people started to invent abstractions and write programs on a higher level than the raw machine code.
+They designed programming languages that allow you to write code without worrying about the under the hood stuff like memory management, how to handle different hardware,
+and many other things that we as high level programmers may not even know about.
+OK, so what happens to your code then compile it takes that code and turns it into the machine code, OK?
+OK, so this is a really long article if you wonder that you can check it.
+So here, the explaining thing is a compiler.
+OK, so it takes the input language tokens and convert them to internal form and then symbol table which is all information about names of entities.
+Such it is an extremely highly detailed and complex software we can say that.
+I wonder if there is any information.
+I wonder if there is any information.
+OK, I think it's hard to find anyway, let's continue.
+A pipe and filter compiler architecture.
+OK, so there is first lexical analysis.
+If you write incorrect data names variable types names, your compiler may give an error to you before start even compiling.
+OK, so for each programming language, have the compiler behave different.
+However, in every one of them, there is lexical analysis which takes symbol table, syntax tree, then there is synthetic analysis which also access symbol table, syntax tree, then there is semantic analysis.
+And then a final, the code generation.
+Repository architecture for a language processing system.
+So there is predi-printed editor, lexical analyzer, syntax analyzers, semantic analyzer, optimizer, code changer and they are accessing the abstract syntax tree, grammar, definition, symbol table, definition.
+So what are the key points of the chapters to this lecture?
+Models of application systems architectures help us understand and compare applications, validate application system designs and assess large scale components for reuse.
+Transaction processing systems are interactive systems that allow information in a database to be remotely accessed and modified by a number of users.
+Language processing systems are used to translate texts from one language into another and to carry out the instruction specified in the input language.
+They include a translator and an abstract machine that executes the generated language.
+OK.
+So.
+All right, I think this is enough for today.
+Hopefully, see you next week.
+In your project, you will be needed to design such representations.
+And, you know, the diagrams of your software.
+So it will be like this. You will be needed to pick a project yourself.
+It will be a programming project.
+And based on your programming, based on your software, you will generate the, you know, design or the descriptions example.
+Tabular design and such of your project, like we are seeing here.
+OK.
+I would like to explain the details later.
+OK. So, hope you see you next week and our next week.

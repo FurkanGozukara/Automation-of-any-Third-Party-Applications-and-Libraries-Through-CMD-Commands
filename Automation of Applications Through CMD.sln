@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automation of Applications Through CMD", "Automation of Applications Through CMD.csproj", "{EE328496-3005-4FE4-9F7E-E8F8B3FF2EEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE328496-3005-4FE4-9F7E-E8F8B3FF2EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE328496-3005-4FE4-9F7E-E8F8B3FF2EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE328496-3005-4FE4-9F7E-E8F8B3FF2EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE328496-3005-4FE4-9F7E-E8F8B3FF2EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADBD793E-57FF-4651-91B4-9318EB222DD8}
+	EndGlobalSection
+EndGlobal

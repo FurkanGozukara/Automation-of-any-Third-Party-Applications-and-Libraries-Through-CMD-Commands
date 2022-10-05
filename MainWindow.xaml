@@ -1,0 +1,18 @@
+﻿<Window x:Class="Automation_of_Applications_Through_CMD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Automation_of_Applications_Through_CMD"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Name="btnStartBatchProcessing" Content="Start Processing Videos as Batch" HorizontalAlignment="Left" Margin="29,33,0,0" VerticalAlignment="Top" Height="50" Width="210" Click="btnStartBatchProcessing_Click"/>
+        <ComboBox Name="cmbBoxTaskOptions" HorizontalAlignment="Left" Margin="255,47,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btnPickProcessingFolder" Content="Pick processing folder" HorizontalAlignment="Left" Margin="245,137,0,0" VerticalAlignment="Top" Height="51" Width="161" Click="btnPickProcessingFolder_Click"/>
+        <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Margin="245,102,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="527"/>
+        <Button x:Name="btnPickProecssingFile" Content="Pick processing file" HorizontalAlignment="Left" Margin="435,137,0,0" VerticalAlignment="Top" Height="51" Width="161" Click="btnPickProecssingFile_Click"/>
+        <ComboBox x:Name="cmbBoxModels" HorizontalAlignment="Left" Margin="400,47,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

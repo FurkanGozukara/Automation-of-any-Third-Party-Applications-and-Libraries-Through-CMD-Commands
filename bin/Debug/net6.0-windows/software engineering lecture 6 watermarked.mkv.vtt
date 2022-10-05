@@ -1,0 +1,1640 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+ Hello dear students, welcome to lecture 6 of software engineering course.
+
+00:06.000 --> 00:09.000
+ So the today's topic is architectural design.
+
+00:09.000 --> 00:11.000
+ Let's start.
+
+00:11.000 --> 00:16.000
+ These below topics are covered in today's lectures.
+
+00:16.000 --> 00:20.000
+ Architectural design decisions.
+
+00:20.000 --> 00:23.000
+ Architectural views.
+
+00:23.000 --> 00:26.000
+ Architectural patterns.
+
+00:26.000 --> 00:33.000
+ Application architectures.
+
+00:33.000 --> 00:40.000
+ Software architecture.
+
+00:40.000 --> 00:53.000
+ The design process for identifying the subsystems making up a system and the framework for subsystem control and communication is architectural design.
+
+00:53.000 --> 00:58.000
+ The output of this design process is a description of the software architecture.
+
+00:58.000 --> 01:01.000
+ Okay, so what is the architectural design?
+
+01:01.000 --> 01:11.000
+ It is the design process for identifying the subsystems making up a system and the framework for subsystem control and communication.
+
+01:11.000 --> 01:19.000
+ So architectural design is about the systems that composes our system systems and frameworks.
+
+01:19.000 --> 01:29.000
+ Okay, and the output of this design process is a description of software architecture.
+
+01:29.000 --> 01:40.000
+ Architectural design.
+
+01:40.000 --> 01:47.000
+ An early stage of the system design process represents the link between specification and design processes.
+
+01:47.000 --> 01:51.000
+ Often carried out in parallel with some specification activities.
+
+01:51.000 --> 01:58.000
+ It involves identifying major system components and their communications.
+
+01:58.000 --> 02:02.000
+ Okay.
+
+02:02.000 --> 02:06.000
+ The architecture of a packing robot control system.
+
+02:06.000 --> 02:10.000
+ So let's see the architecture of a pattern robot.
+
+02:10.000 --> 02:15.000
+ Okay, it has vision system of course to identify the packages.
+
+02:15.000 --> 02:22.000
+ And it has object identification system which is dependent on the vision system.
+
+02:22.000 --> 02:33.000
+ And from the combination of vision system and object identification system, there is arm control system and grip control system.
+
+02:33.000 --> 02:44.000
+ By the way, these arm control and grip control system also takes input from packaging selection system and packaging system.
+
+02:44.000 --> 02:54.000
+ And the packaging selection system and picking system takes input from object identification system.
+
+02:54.000 --> 02:58.000
+ So we can analyze it like this.
+
+02:58.000 --> 03:01.000
+ First robot series is environment.
+
+03:01.000 --> 03:07.000
+ Then this environment data, the image is sent to the object identification system.
+
+03:07.000 --> 03:16.000
+ Then object identification system determines which packages will be selected to pack.
+
+03:16.000 --> 03:17.000
+ Okay.
+
+03:17.000 --> 03:22.000
+ And then they need to pack it and to pack them.
+
+03:22.000 --> 03:27.000
+ Or let's say to pack the sorting objects to selected objects.
+
+03:27.000 --> 03:32.000
+ Packing system sends data to the arm control and grip control.
+
+03:32.000 --> 03:42.000
+ And arm control and grip control uses vision system and object identification system to pack those packages.
+
+03:42.000 --> 03:43.000
+ Okay.
+
+03:43.000 --> 03:56.000
+ And there is also conveyor control which also sends output to the image also takes input from packing system.
+
+03:56.000 --> 04:01.000
+ Architectural abstraction.
+
+04:01.000 --> 04:06.000
+ Architecture in the small is concerned with the architecture of individual programs.
+
+04:06.000 --> 04:16.000
+ At this level, we are concerned with the way that an individual program is decomposed into components.
+
+04:16.000 --> 04:25.000
+ Architecture in the large is concerned with the architecture of complex enterprise systems that include other systems, programs and program components.
+
+04:25.000 --> 04:36.000
+ These enterprise systems are distributed over different computers which may be owned and managed by different companies.
+
+04:36.000 --> 04:39.000
+ Advantage of explicit architecture.
+
+04:39.000 --> 04:43.000
+ Stakeholder communication.
+
+04:43.000 --> 04:52.000
+ Architecture may be used as a focus of discussion by system stakeholders.
+
+04:52.000 --> 04:56.000
+ System analysis.
+
+04:56.000 --> 05:02.000
+ Means that analysis of whether the system can meet its non-functional requirements as possible.
+
+05:02.000 --> 05:13.000
+ Large scale reuse.
+
+05:13.000 --> 05:19.000
+ The architecture may be reusable across a range of systems.
+
+05:19.000 --> 05:27.000
+ Product line architectures may be developed.
+
+05:27.000 --> 05:32.000
+ Architectural representations.
+
+05:32.000 --> 05:41.000
+ Simple, informal block diagrams showing entities and relationships are the most frequently used method for documenting software architectures.
+
+05:41.000 --> 05:42.000
+ Okay.
+
+05:42.000 --> 05:48.000
+ So simple, informal block diagrams are used in mostly.
+
+05:48.000 --> 05:52.000
+ But these have been criticized because they lack semantics.
+
+05:52.000 --> 05:58.000
+ Do not show the types of relationships between entities nor the visible properties of entities in the architecture.
+
+05:58.000 --> 06:08.000
+ However, this method has been criticized by the size of it.
+
+06:08.000 --> 06:11.000
+ Depends on the use of architectural models.
+
+06:11.000 --> 06:18.000
+ The requirements for model semantics depends on how the models are used.
+
+06:18.000 --> 06:22.000
+ Box and line diagrams.
+
+06:22.000 --> 06:34.000
+ Very abstract, they do not show the nature of component relationships nor the externally visible properties of the subsystems.
+
+06:34.000 --> 06:44.000
+ However, useful for communication with stakeholders and for project planning.
+
+06:44.000 --> 06:47.000
+ Use of architectural models.
+
+06:47.000 --> 06:57.000
+ As a way of facilitating discussion about the system design.
+
+06:57.000 --> 07:07.000
+ A high level architectural view of a system is useful for communication with system stakeholders and project planning because it is not cluttered with detail.
+
+07:07.000 --> 07:12.000
+ Stakeholders can relate to it and understand an abstract view of the system.
+
+07:12.000 --> 07:17.000
+ They can then discuss the system as a whole without being confused by detail.
+
+07:17.000 --> 07:25.000
+ So it is really important to have architectural model to discuss it with the stakeholders.
+
+07:25.000 --> 07:30.000
+ So what? Who has stakeholders if you remember it?
+
+07:30.000 --> 07:51.000
+ Let's look for a formal definition of it.
+
+08:00.000 --> 08:10.000
+ In simple words, anyone having any type of relation, interest in the project is known as stakeholder.
+
+08:10.000 --> 08:26.000
+ The term software project stakeholder refers to a person, group or company that is directly or indirectly involved in the project and who may affect or get affected by the outcome of the project.
+
+08:26.000 --> 08:30.000
+ What is stakeholder identification?
+
+08:30.000 --> 08:40.000
+ It is the process of identifying a person, group or a company which can affect or get affected by a decision, activity or the outcome of the software project.
+
+08:40.000 --> 08:48.000
+ It is important in order to identify the exact requirements of the project and what various stakeholders are expecting from the project outcome.
+
+08:48.000 --> 09:00.000
+ Okay, so you see stakeholders are categorized into two categories. First one is internal stakeholder and second one is external stakeholder.
+
+09:00.000 --> 09:10.000
+ So project manager project team, company founders are internal stakeholders and external stakeholders are customers, government, supply and such.
+
+09:10.000 --> 09:19.000
+ You see even the developer can be a stakeholder because they are also taking part of.
+
+09:19.000 --> 09:28.000
+ They are also taking part in the team.
+
+09:28.000 --> 09:34.000
+ Okay, for example, project managers.
+
+09:34.000 --> 09:54.000
+ Responsible for managing the whole project. Project manager is generally never involved in producing the end product, but he controls monitors and manages the activities involved in the production.
+
+09:54.000 --> 10:04.000
+ It forms the actual work of the project under the project manager, including development, testing, etc.
+
+10:04.000 --> 10:15.000
+ Okay, so now you have you get the idea. So with architectural model, it is much easier to discuss the project with stakeholders.
+
+10:15.000 --> 10:30.000
+ It can be developer, it can be the company staff, it can be project manager, it can be clients, external buyers and such.
+
+10:30.000 --> 10:36.000
+ As a way of documenting an architecture that has been designed.
+
+10:36.000 --> 10:46.000
+ The aim here is to produce a complete system model that shows the different components in a system, their interfaces and their connections.
+
+10:46.000 --> 10:51.000
+ Architectural design decisions.
+
+10:51.000 --> 10:58.000
+ Architectural design is a creative process so the process differs depending on the type of system being developed.
+
+10:58.000 --> 11:09.000
+ Okay, this is important the type of system. In software engineering, it is always important the type of system that you are going to build.
+
+11:09.000 --> 11:14.000
+ Okay, you have to consider that every time, in every case.
+
+11:14.000 --> 11:27.000
+ However, a number of common decisions span all design processes and these decisions affect the non-functional characteristics of the system.
+
+11:27.000 --> 11:31.000
+ Architectural design decisions.
+
+11:31.000 --> 11:37.000
+ Is there a generic application architecture that can be used?
+
+11:37.000 --> 11:41.000
+ How will the system be distributed?
+
+11:41.000 --> 11:46.000
+ What architectural styles are appropriate?
+
+11:46.000 --> 11:51.000
+ What approach will be used to structure the system?
+
+11:51.000 --> 11:56.000
+ How will the system be decomposed into modules?
+
+11:56.000 --> 12:01.000
+ What control strategy should be used?
+
+12:01.000 --> 12:06.000
+ How will the architectural design be evaluated?
+
+12:06.000 --> 12:12.000
+ How should the architecture be documented?
+
+12:12.000 --> 12:27.000
+ Architecture is used.
+
+12:27.000 --> 12:41.000
+ Systems in the same domain often have similar architectures that reflect domain concepts.
+
+12:41.000 --> 12:51.000
+ Application product lines are built around a core architecture with variants that satisfy particular customer requirements.
+
+12:51.000 --> 12:58.000
+ Architecture of a system may be designed around one of more architectural patterns or styles.
+
+12:58.000 --> 13:05.000
+ These capture the essence of an architecture and can be instantiated in different ways.
+
+13:05.000 --> 13:10.000
+ Discussed later in this part.
+
+13:10.000 --> 13:14.000
+ Architecture and system characteristics.
+
+13:14.000 --> 13:18.000
+ Performance.
+
+13:18.000 --> 13:22.000
+ Localize critical operations and minimize communications.
+
+13:22.000 --> 13:28.000
+ Use large rather than fine grain components.
+
+13:28.000 --> 13:35.000
+ For performance, localize critical operations and minimize communications.
+
+13:35.000 --> 13:47.000
+ Which means that you won't be wasting resources or time to get down your operations and communications in other perhaps platform or on others.
+
+13:47.000 --> 13:54.000
+ Services and such.
+
+13:54.000 --> 14:03.000
+ Use a layered architecture with critical assets in the interlayers.
+
+14:03.000 --> 14:14.000
+ Localize safety critical features in a small number of subsystems.
+
+14:14.000 --> 14:24.000
+ Include redundant components and mechanisms for fault tolerance.
+
+14:24.000 --> 14:32.000
+ Use fine grain, replaceable components.
+
+14:32.000 --> 14:46.000
+ OK, so what does fine grain means?
+
+14:46.000 --> 14:56.000
+ OK, so some has already asked it.
+
+14:56.000 --> 15:02.000
+ OK, that is a question in solving an engineering step exchange column.
+
+15:02.000 --> 15:11.000
+ This should have the best answer I believe.
+
+15:11.000 --> 15:16.000
+ Courser and finer grain means implementing more or less functionality respectively.
+
+15:16.000 --> 15:19.000
+ It is somewhat related to the size too.
+
+15:19.000 --> 15:23.000
+ So a fine grain, service is something that does very little.
+
+15:23.000 --> 15:33.000
+ Like a service that just multiples two numbers, a course grain service is something that does something more complex like booking a room in a hotel.
+
+15:33.000 --> 15:38.000
+ A medium grain service is usually something near the middle of this scale.
+
+15:38.000 --> 15:43.000
+ Like a service that books only the money from your credit card but doesn't do anything else.
+
+15:43.000 --> 15:49.000
+ It is very much subjective of course and depends on the scales involved in your project.
+
+15:49.000 --> 15:59.000
+ What he is saying there if you use finer grain services objects then obviously you need to communicate more because you need to speak to more services objects.
+
+15:59.000 --> 16:07.000
+ This also means that you are exposed to a lot more knowledge because you have to understand some data and the choreography between calls.
+
+16:07.000 --> 16:09.000
+ OK.
+
+16:09.000 --> 16:32.000
+ So if we use fine grain replaceable components that means if something near is necessarily we can replace it with a better one and the whole system will continue to operate as it is positive to be.
+
+16:32.000 --> 16:35.000
+ Architectural views.
+
+16:35.000 --> 16:42.000
+ OK. I think it is related to this one.
+
+16:48.000 --> 16:58.000
+ What views are perspectives are useful when designing and documenting a system's architecture?
+
+16:58.000 --> 17:05.000
+ What notations should be used for describing architectural models?
+
+17:05.000 --> 17:13.000
+ Each architectural model only shows one view or perspective of the system.
+
+17:13.000 --> 17:24.000
+ It might show how a system is decomposed into modules, how the runtime processes interact are the different ways in which system components are distributed across a network.
+
+17:24.000 --> 17:35.000
+ For both design and documentation you usually need to present multiple views of the software architecture.
+
+17:35.000 --> 17:43.000
+ Four plus one view model of software architecture.
+
+17:43.000 --> 17:52.000
+ A logical view which shows the key abstractions in the system as objects or object classes.
+
+17:52.000 --> 18:01.000
+ A process view which shows how at runtime the system is composed of interacting processes.
+
+18:01.000 --> 18:09.000
+ A development view which shows how the software is decomposed for development.
+
+18:09.000 --> 18:19.000
+ A physical view which shows the system hardware and how software components are distributed across the processors in the system.
+
+18:19.000 --> 18:25.000
+ Related using use cases or scenarios plus one.
+
+18:25.000 --> 18:38.000
+ OK, so there are four main views which are a logical view, a process view, a development view and a physical view.
+
+18:38.000 --> 18:42.000
+ Architectural patterns.
+
+18:42.000 --> 18:52.000
+ Patterns are a means of representing, sharing and reusing knowledge.
+
+18:52.000 --> 19:03.000
+ An architectural pattern is a stylized description of good design practice which has been tried and tested in different environments.
+
+19:03.000 --> 19:11.000
+ Patterns should include information about when they are and when the air not useful.
+
+19:11.000 --> 19:20.000
+ Patterns may be represented using tabular and graphical descriptions.
+
+19:20.000 --> 19:23.000
+ The model view controller MVC pattern.
+
+19:23.000 --> 19:32.000
+ MVC pattern is very popular in the software development in the recent years.
+
+19:32.000 --> 19:41.000
+ For example, there is a framework called as S without that MVC.
+
+19:41.000 --> 19:54.000
+ So the MVC framework, MVC approach is getting the new trend of software development.
+
+19:54.000 --> 20:07.000
+ Model view controller, usually known as MVC, is a software design pattern, one commonly used for developing user interfaces that divides the related program logic into three interconnected elements.
+
+20:07.000 --> 20:19.000
+ This is done to separate internal representations of information from the ways information is presented to and accepted from the user, two, three.
+
+20:19.000 --> 20:43.000
+ Traditionally used for desktop graphical user interfaces, GUIs, this pattern has become popular for designing web applications, for popular programming languages like JavaScript, Python, object Pascal, Delphi, Ruby, PHP, Java, C-Sharp and Swift have MVC frameworks that are used for web or mobile application development straight out of the box.
+
+20:43.000 --> 20:59.000
+ Okay, so using there is model updates view and from the view is displayed to the user, then user uses the view and these use which goes to the controller, control the marketplace, the model and it updates the view and such.
+
+20:59.000 --> 21:03.000
+ This is the how the model works.
+
+21:03.000 --> 21:07.000
+ Let's read each of them. So the model is.
+
+21:07.000 --> 21:19.000
+ The central component of the pattern. It is the applications dynamic data structure independent of the user interface, five it directly manages the data logic and rules of the application.
+
+21:19.000 --> 21:33.000
+ So the model is the part which communicates with database which updates the alerts in source select database and such other things so the view is.
+
+21:33.000 --> 21:38.000
+ Any representation of information such as a chart, diagram or table.
+
+21:38.000 --> 21:47.000
+ Multiple views of the same information are possible, such as a bar chart for management and a tabular view for accountants.
+
+21:47.000 --> 21:54.000
+ Accepts input and converts it to commands for the model or view, six.
+
+21:54.000 --> 22:04.000
+ In addition to dividing the application into these components, the model view controller design defines the interactions between them.
+
+22:04.000 --> 22:08.000
+ The model is responsible for managing the data of the application.
+
+22:08.000 --> 22:15.000
+ It receives user input from the controller. The view means presentation of the model in a particular format.
+
+22:15.000 --> 22:21.000
+ The controller responds to the user input and performs interactions on the data model objects.
+
+22:21.000 --> 22:35.000
+ The controller receives the input, optionally validates it and then passes the input to the model.
+
+22:35.000 --> 22:43.000
+ As with other software patterns, MVC expresses the core of the solution to a problem while allowing it to be adapted for each system.
+
+22:43.000 --> 22:49.000
+ Eight particular MVC designs can vary significantly from the traditional description here.
+
+22:49.000 --> 22:59.000
+ Okay, so let's read the MVC pattern of our example.
+
+22:59.000 --> 23:04.000
+ So the description.
+
+23:04.000 --> 23:12.000
+ It says views 93.
+
+23:12.000 --> 23:16.000
+ Separates presentation and interaction from the system data.
+
+23:16.000 --> 23:21.000
+ The system is structured into three logical components that interact with each other.
+
+23:21.000 --> 23:27.000
+ The model component manages the system data and associated operations on the data.
+
+23:27.000 --> 23:32.000
+ The view component defines and manages how the data is presented to the user.
+
+23:32.000 --> 23:38.000
+ The controller component manages user interaction, e.g., key presses, mouse clicks, etc.
+
+23:38.000 --> 23:43.000
+ And passes these interactions to the view and the model.
+
+23:43.000 --> 23:50.000
+ Okay, so.
+
+23:50.000 --> 23:58.000
+ Figure 6.4 shows the architecture of a web-based application system organized using the MVC pattern.
+
+23:58.000 --> 24:05.000
+ Let's go to this here and we will show that.
+
+24:05.000 --> 24:18.000
+ Used when there are multiple ways to view and interact with data. Also used when the future requirements for interaction and presentation of data are unknown.
+
+24:18.000 --> 24:23.000
+ It allows the data to change independently of its representation and vice versa.
+
+24:23.000 --> 24:31.000
+ Supports presentation of the same data in different ways with changes made in one representation shown in all of them.
+
+24:31.000 --> 24:47.000
+ This is really important. For example, think about that you are developing a software for an Android application and iOS application web application and win those client-based applications.
+
+24:47.000 --> 24:52.000
+ You can use the model in every one of them.
+
+24:52.000 --> 25:04.000
+ Okay, only the view and the controller will change because how you interact with the software depends on the platform.
+
+25:04.000 --> 25:11.000
+ You are using however the model can stay perfectly same for every one of them.
+
+25:11.000 --> 25:18.000
+ And it would make your job much, much easier to manage all of the platforms at once.
+
+25:18.000 --> 25:30.000
+ Can involve additional code and code complexity when the data model and interactions are simple?
+
+25:30.000 --> 25:53.000
+ This is to doing a website, for example, in MEC pattern is really harder than doing just in a single page.
+
+25:53.000 --> 26:02.000
+ Okay, so there is controller which does maps user actions to the model of this selects weave.
+
+26:02.000 --> 26:04.000
+ And it goes to the change tag.
+
+26:04.000 --> 26:11.000
+ Okay, it changed the state of the model and encapsulates application state of the first wave of state changes.
+
+26:11.000 --> 26:15.000
+ And then this goes to the change notification to the weave.
+
+26:15.000 --> 26:29.000
+ Then the model requires model updates since user events controller. So the weave feed-based model as well state query and controller feed-based weave with wave selection and weave feed-based controller with user events.
+
+26:29.000 --> 26:33.000
+ Okay, and there is also a change of notification.
+
+26:33.000 --> 26:41.000
+ So this is how an MEC of web page.
+
+26:41.000 --> 26:48.000
+ Or this is more like a general MEC model. And there is the application architecture using MEC pattern.
+
+26:48.000 --> 26:56.000
+ So there is a browser. For example, this is a browser, this is Chrome browser.
+
+26:56.000 --> 27:07.000
+ And from browser, we control the events events with controller, HTTP request processing, application specific logic data validation.
+
+27:07.000 --> 27:16.000
+ And from there, we update the request and it goes to our model, business logic database.
+
+27:16.000 --> 27:21.000
+ And when model is updated, it sends change notification to the weave.
+
+27:21.000 --> 27:25.000
+ And the can also make a refresh request.
+
+27:25.000 --> 27:32.000
+ And from the dynamic page generation for management and from the video user events.
+
+27:32.000 --> 27:35.000
+ So this is how it is done.
+
+27:35.000 --> 27:41.000
+ From to display.
+
+27:41.000 --> 27:51.000
+ I will give an example what could be the weave events and controllers from Toro's editor.
+
+27:51.000 --> 27:56.000
+ Okay, so this is our weave.
+
+27:56.000 --> 28:05.000
+ Things we see. When I do an event, it will go to the controller to update the model.
+
+28:05.000 --> 28:09.000
+ Model is the data I am seeing on my screen.
+
+28:09.000 --> 28:19.000
+ So for example, from weave, when I click this one, it will go to the controller and controller will load the need data.
+
+28:19.000 --> 28:32.000
+ And when we request model to update and model will update need data. And when need data is updated, it will be reflected back to the weave.
+
+28:32.000 --> 28:35.000
+ So I am clicking this for example.
+
+28:35.000 --> 28:45.000
+ So the click event was the job of the controller, then control the requested model to update data and data of the model is updated.
+
+28:45.000 --> 28:50.000
+ And then the weave is reflected with the name is data as you can see.
+
+28:50.000 --> 29:00.000
+ I am not saying that this website was done in MBC framework. However, if you have coded this website in MBC, it would work like this.
+
+29:00.000 --> 29:01.000
+ Okay.
+
+29:01.000 --> 29:10.000
+ In the next semester, I am hopefully going to give the lectures the course of ASVDAT that MBC with.NET Core 5.
+
+29:10.000 --> 29:20.000
+ So please subscribe and wait for that course if you are interested in MBC and web design.
+
+29:20.000 --> 29:22.000
+ What do we do?
+
+29:22.000 --> 29:25.000
+ Layered Architecture.
+
+29:25.000 --> 29:31.000
+ Use to model the interfacing of subsystems.
+
+29:31.000 --> 29:40.000
+ Organizes the system into a set of layers or abstract machines each of which provide a set of services.
+
+29:40.000 --> 29:54.000
+ Supports the incremental development of subsystems in different layers when a layer interface changes only the adjacent layer is affected.
+
+29:54.000 --> 29:59.000
+ However, often artificial to structure systems in this way.
+
+29:59.000 --> 30:05.000
+ Okay. I will take a pause for a moment.
+
+30:05.000 --> 30:20.000
+ All right. So, the layer that architecture pattern in the tabular view, name and layer architecture description.
+
+30:20.000 --> 30:35.000
+ Organizes the system into layers with related functionality associated with each layer. A layer provides services to the layer above it so the lowest level layers represent core services that are likely to be used throughout the system.
+
+30:35.000 --> 30:38.000
+ See figure 6.6.
+
+30:38.000 --> 30:40.000
+ Okay. We will see those figures.
+
+30:40.000 --> 30:52.000
+ Layered model of a system for sharing copyright documents held in different libraries as shown in figure 6.7.
+
+30:52.000 --> 31:06.000
+ Used when building new facilities on top of existing systems when the development is spread across several teams with each team responsibility for a layer of functionality when there is a requirement for multi-level security.
+
+31:06.000 --> 31:20.000
+ So working as a separate teams is like a mandatory thing for the corporate software.
+
+31:20.000 --> 31:35.000
+ I mean the corporate level software because when you are working in a big software, a professional software, a small single team would have hard time to complete it.
+
+31:35.000 --> 31:49.000
+ For you have to have multiple teams, you may compose a single team which is very big. However, a single team with a lot of developers would be harder to manage.
+
+31:49.000 --> 32:07.000
+ So best way is composing several teams based on the developers experience and assigning them to the particular layers based on their expertise and such.
+
+32:07.000 --> 32:11.000
+ So advantages of layered architectures.
+
+32:11.000 --> 32:21.000
+ Allows replacement of entire layers so long as the interface is maintained.
+
+32:21.000 --> 32:29.000
+ Redundant facilities, EG, authentication can be provided in each layer to increase the dependability of the system.
+
+32:29.000 --> 32:40.000
+ In practice, providing a clean separation between layers is often difficult and a high-level layer may have to interact directly with lower-level layers rather than through the layer immediately below it.
+
+32:40.000 --> 32:49.000
+ Performance can be a problem because of multiple levels of interpretation of a service request as it is processed at each layer.
+
+32:49.000 --> 33:03.000
+ So a generic layered architectures, usually there is user interface at the highest level. Using interface management authentication on authorization, one layer below user interface.
+
+33:03.000 --> 33:16.000
+ And under it, core business logic, application functionality, system utilities, and at the very lower layer system support, operation system database and such.
+
+33:16.000 --> 33:29.000
+ So the architecture of a library system, let's see the minimum management system, okay.
+
+33:29.000 --> 33:44.000
+ So there is a web browser interface which the users clients interact with the system in this layer than there is logging forms and query manager and period manager layers.
+
+33:44.000 --> 33:50.000
+ So this layer handles all these three different operations.
+
+33:50.000 --> 33:55.000
+ And under that there is distributive search document retrieval, write manager and accountant.
+
+33:55.000 --> 34:08.000
+ So actually all layers, under the browser interface, are usually at the server site, okay.
+
+34:08.000 --> 34:19.000
+ For perhaps the print manager can be at the client site, forms and query manager can be at the client site, but put need verification at the server site.
+
+34:19.000 --> 34:23.000
+ And login will be of course at the server site.
+
+34:23.000 --> 34:36.000
+ And the distributive search document retrieval, write manager, accounting, and under that there is library index and under that there are databases.
+
+34:36.000 --> 34:43.000
+ So the key points of so far.
+
+34:43.000 --> 34:47.000
+ Let's see the.
+
+34:47.000 --> 34:52.000
+ A software architecture is a description of how a software system is organized.
+
+34:52.000 --> 35:01.000
+ Architectural design decisions include decisions on the type of application, the distribution of the system, the architectural styles to be used.
+
+35:01.000 --> 35:11.000
+ Architectures may be documented from several different perspectives or views such as a conceptual view, a logical view, a process view and a development view.
+
+35:11.000 --> 35:17.000
+ Architectural patterns are a means of reusing knowledge about generic system architectures.
+
+35:17.000 --> 35:25.000
+ They describe the architecture, explain when it may be used and describe its advantages and disadvantages.
+
+35:25.000 --> 35:32.000
+ Okay, so lecture six architectural design part two, okay, let's start.
+
+35:32.000 --> 35:36.000
+ Repository architectures.
+
+35:36.000 --> 35:42.000
+ Subsystems must exchange data. This may be done in two ways.
+
+35:42.000 --> 35:45.000
+ Okay, so the first day.
+
+35:45.000 --> 35:54.000
+ Shared data is held in a central database or repository and may be accessed by all subsystems.
+
+35:54.000 --> 36:03.000
+ Each subsystem maintains its own database and passes data explicitly to other subsystems.
+
+36:03.000 --> 36:13.000
+ When large amounts of data are to be shared, the repository model of sharing is most commonly used that this is an efficient data sharing mechanism.
+
+36:13.000 --> 36:27.000
+ So yes, having a central database or repository is better when there are large amounts of data, because let's say you have hundreds subsystems and if they maintain their own databases,
+
+36:27.000 --> 36:38.000
+ that will cause a lot of unnecessary resources to use it and perhaps the synchronization issues and such.
+
+36:38.000 --> 36:45.000
+ So having a single central database is better and more common solution.
+
+36:45.000 --> 36:48.000
+ The repository pattern.
+
+36:48.000 --> 36:53.000
+ Okay, so the description of the repository pattern is.
+
+36:53.000 --> 37:00.000
+ All data in a system is managed in a central repository that is accessible to all system components.
+
+37:00.000 --> 37:05.000
+ Components do not interact directly only through the repository.
+
+37:05.000 --> 37:10.000
+ Okay, so the example.
+
+37:10.000 --> 37:17.000
+ Figure 6.9 is an example of an eye where the components use a repository of system design information.
+
+37:17.000 --> 37:23.000
+ Each software tool generates information which is then available for use by other tools.
+
+37:23.000 --> 37:30.000
+ Okay, when it is user, when is repository is user.
+
+37:30.000 --> 37:38.000
+ You should use this pattern when you have a system in which large volumes of information are generated that has to be stored for a long time.
+
+37:38.000 --> 37:51.000
+ You may also use it in data driven systems where the inclusion of data in the repository triggers an action or tool.
+
+37:51.000 --> 37:57.000
+ Components can be independent. They do not need to know of the existence of other components.
+
+37:57.000 --> 38:02.000
+ Changes made by one component can be propagated to all components.
+
+38:02.000 --> 38:09.000
+ All data can be managed consistently e.g. backups done at the same time as it is all in one place.
+
+38:09.000 --> 38:16.000
+ So what are the disadvantages which is also important factor to take into consideration?
+
+38:16.000 --> 38:19.000
+ The repository is a single point of failure.
+
+38:19.000 --> 38:22.000
+ Problems in the repository affect the whole system.
+
+38:22.000 --> 38:27.000
+ Maybe inefficiencies in organizing all communication through the repository.
+
+38:27.000 --> 38:32.000
+ Distributing the repository across several computers may be difficult.
+
+38:32.000 --> 38:35.000
+ Yes, okay.
+
+38:35.000 --> 38:40.000
+ So this single point of failure is an important fact.
+
+38:40.000 --> 38:56.000
+ Therefore, you have to have proper backups, proper failures, let's say scenarios to be prepared.
+
+38:56.000 --> 39:03.000
+ Okay, so it is not all about advantages, but also there are disadvantages that you have to consider.
+
+39:03.000 --> 39:10.000
+ So a repository architecture for an IDA integrated development environment such as Visual Studio.
+
+39:10.000 --> 39:22.000
+ So there is design translators, UML editors, code generators, project repository, design analyzers, and the purchase generator, Python editor and Java editors.
+
+39:22.000 --> 39:32.000
+ So this is based on the design for this particular IDA IDA.
+
+39:32.000 --> 39:36.000
+ You see this project repository.
+
+39:36.000 --> 39:47.000
+ Actually, we are also having a repository for our courses, which is, we should already know it.
+
+39:47.000 --> 39:50.000
+ I will be posting everything here.
+
+39:50.000 --> 39:58.000
+ I am also posting currently and your final project will be also uploaded to here, the details of it.
+
+39:58.000 --> 40:02.000
+ So you see, for every lecture, I have separate repository.
+
+40:02.000 --> 40:07.000
+ I am updating them, uploading them with this way.
+
+40:07.000 --> 40:15.000
+ So to those are able to get whatever I share within a synchronization.
+
+40:15.000 --> 40:20.000
+ And we will continue.
+
+40:20.000 --> 40:27.000
+ I also have private repositories for my own projects and they are extremely useful.
+
+40:27.000 --> 40:34.000
+ Client server architecture.
+
+40:34.000 --> 40:45.000
+ Distributed system model, which shows how data and processing is distributed across a range of components.
+
+40:45.000 --> 40:50.000
+ Can be implemented on a single computer?
+
+40:50.000 --> 41:00.000
+ Set of standalone servers, which provides specific services such as printing, data management, etc.
+
+41:00.000 --> 41:08.000
+ Set of clients, which call on these services.
+
+41:08.000 --> 41:12.000
+ Network, which allows clients to access servers?
+
+41:12.000 --> 41:22.000
+ Client server architecture is mandatory.
+
+41:22.000 --> 41:27.000
+ If you are going to have security requirements.
+
+41:27.000 --> 41:33.000
+ For example, you have a subscription based system.
+
+41:33.000 --> 41:41.000
+ For practically, for almost every online tool, you need client server architecture.
+
+41:41.000 --> 41:53.000
+ What I mean is, if you are selling a product that requires online authentication or online data saving or something,
+
+41:53.000 --> 42:02.000
+ that is online, if it is not just offline stand-alone application, you have to have a server which will process
+
+42:02.000 --> 42:05.000
+ the sensitive information at server site.
+
+42:05.000 --> 42:14.000
+ Such as keep to database there or such as make the authentication and everything or make the database connections.
+
+42:14.000 --> 42:19.000
+ You have to have a server site running application.
+
+42:19.000 --> 42:30.000
+ And then there will be of course a client site application such as web sites or Windows-based applications.
+
+42:30.000 --> 42:42.000
+ However, all of them will communicate with that server site sort of way as well.
+
+42:42.000 --> 42:47.000
+ The client server pattern.
+
+42:47.000 --> 42:55.000
+ In a client server architecture, the functionality of the system is organized into services with each service delivered from a separate server.
+
+42:55.000 --> 43:00.000
+ Clients are users of these services and access servers to make use of them.
+
+43:00.000 --> 43:07.000
+ Of course, you can have separate server or you can have single server.
+
+43:07.000 --> 43:13.000
+ However, if it is client server pattern, you should have separate server for each service.
+
+43:13.000 --> 43:22.000
+ Like print service or like authentication service or other things.
+
+43:22.000 --> 43:32.000
+ Figure 6.11 is an example of a film and video DVD library organized as a client server system.
+
+43:32.000 --> 43:38.000
+ Used when data in a shared database has to be accessed from a range of locations.
+
+43:38.000 --> 43:47.000
+ Because servers can be replicated, may also be used when the load on a system is variable.
+
+43:47.000 --> 43:52.000
+ The principle advantage of this model is that servers can be distributed across a network.
+
+43:52.000 --> 44:06.000
+ General functionality, EG, a printing service can be available to all clients and does not need to be implemented by all services.
+
+44:06.000 --> 44:13.000
+ Each service is a single point of failure so susceptible to denial of service attacks or server failure.
+
+44:13.000 --> 44:18.000
+ Performance may be unpredictable because it depends on the network as well as the system.
+
+44:18.000 --> 44:23.000
+ Maybe management problems if servers are owned by different organizations.
+
+44:23.000 --> 44:42.000
+ Okay, you see this denial of service attack. These are pretty severe threats to your servers and having multiple servers will increase the protection cost.
+
+44:42.000 --> 44:59.000
+ Therefore, this is a truly disadvantage. Single point of failure is true about it is true for everything and unless you have redundant servers or services.
+
+44:59.000 --> 45:04.000
+ Management is also a problematic issue.
+
+45:04.000 --> 45:16.000
+ So you have to decide yourself whether to have multiple servers for multiple services or have single servers it's up to you.
+
+45:16.000 --> 45:19.000
+ A client server architecture for a film library.
+
+45:19.000 --> 45:32.000
+ Okay, so there are clients which are being users or customers and there is internet and then each client can connect each one of these services.
+
+45:32.000 --> 45:39.000
+ So one client can access catalog service, library catalog. The other one can access video server, film store.
+
+45:39.000 --> 45:47.000
+ The other one can access picture server, photo store or the other one can access their server, film rent, photo information.
+
+45:47.000 --> 45:58.000
+ So you see each category of information have been separated has been separated into different servers.
+
+45:58.000 --> 46:12.000
+ This can have another advantage. For example, one client wants to be a video server and another one wants to be a picture server and picture server gets down.
+
+46:12.000 --> 46:29.000
+ And in that case, only client three would be affected. So client two can have its service as expected.
+
+46:29.000 --> 46:32.000
+ Okay.
+
+46:32.000 --> 46:40.000
+ Pipe and filter architecture.
+
+46:40.000 --> 46:49.000
+ Functional transformations process their inputs to produce outputs may be referred to as a pipe and filter model as in Unix shell.
+
+46:49.000 --> 46:52.000
+ Variants of this approach are very common.
+
+46:52.000 --> 47:00.000
+ When transformations are sequential, this is a batch sequential model which is extensively used in data processing systems.
+
+47:00.000 --> 47:04.000
+ Not really suitable for interactive systems.
+
+47:04.000 --> 47:14.000
+ Okay. So let's get more information to understand this better. So the pipe and filter pattern. So let's read the description.
+
+47:14.000 --> 47:24.000
+ The processing of the data in a system is organized so that each processing component filter is discrete and carries out one type of data transformation.
+
+47:24.000 --> 47:31.000
+ The data flows as in a pipe from one component to another for processing.
+
+47:31.000 --> 47:46.000
+ Figure 6.13 is an example of a pipe and filter system used for processing invoices.
+
+47:46.000 --> 48:00.000
+ Commonly used in data processing applications, both batch and transaction based where inputs are processed in separate stages to generate related outputs.
+
+48:00.000 --> 48:04.000
+ Easy to understand and supports transformation reuse.
+
+48:04.000 --> 48:08.000
+ Workflow style matches the structure of many business processes.
+
+48:08.000 --> 48:12.000
+ Evolution by adding transformations is straightforward.
+
+48:12.000 --> 48:19.000
+ Can be implemented as either a sequential or concurrent system.
+
+48:19.000 --> 48:25.000
+ The format for data transfer has to be agreed upon between communicating transformations.
+
+48:25.000 --> 48:31.000
+ Each transformation must parse its input and unpars its output to the agreed form.
+
+48:31.000 --> 48:40.000
+ This increases system overhead and may mean that it is impossible to reuse functional transformations that use incompatible data structures.
+
+48:40.000 --> 48:45.000
+ Okay. So that is an example of the pipe and filter architecture.
+
+48:45.000 --> 48:56.000
+ So pipe and filter in this example is used for invoices.
+
+48:56.000 --> 49:04.000
+ So there is invoices incoming and they are read issued invoices, identify payments and there is also payments.
+
+49:04.000 --> 49:17.000
+ And then issued receipts and find payments due issued receipts are going to receive and find payments due is going issue payments reminder and then it goes to the reminders.
+
+49:17.000 --> 49:25.000
+ So there is a piping and filtering as you can see.
+
+49:25.000 --> 49:32.000
+ Application architectures.
+
+49:32.000 --> 49:37.000
+ Application systems are designed to meet an organizational need.
+
+49:37.000 --> 49:46.000
+ As businesses have much in common, their application systems also tend to have a common architecture that reflects the application requirements.
+
+49:46.000 --> 49:59.000
+ A generic application architecture is an architecture for a type of software system that may be configured and adapted to create a system that meets specific requirements.
+
+49:59.000 --> 50:03.000
+ Use of application architectures.
+
+50:03.000 --> 50:12.000
+ As a starting point for architectural design, as a design checklist, as a way of organizing the work of the development team,
+
+50:12.000 --> 50:22.000
+ as a means of assessing components for reuse, as a vocabulary for talking about application types.
+
+50:22.000 --> 50:26.000
+ Examples of application types.
+
+50:26.000 --> 50:30.000
+ Data processing applications.
+
+50:30.000 --> 50:39.000
+ Data driven applications that process data in batches without explicit user intervention during the processing.
+
+50:39.000 --> 50:44.000
+ Transaction processing applications.
+
+50:44.000 --> 50:52.000
+ Data centered applications that process user requests and update information in a system database.
+
+50:52.000 --> 50:56.000
+ Event processing systems.
+
+50:56.000 --> 51:04.000
+ Applications where system actions depend on interpreting events from the system's environment.
+
+51:04.000 --> 51:08.000
+ Language processing systems.
+
+51:08.000 --> 51:16.000
+ Applications where the user's intentions are specified in a formal language that is processed and interpreted by the system.
+
+51:16.000 --> 51:24.000
+ OK, so that's a processing of locations. Let's give an example of each one of these.
+
+51:24.000 --> 51:31.000
+ I think they are given in the following slides.
+
+51:31.000 --> 51:35.000
+ Application type examples.
+
+51:35.000 --> 51:40.000
+ Focus here is on transaction processing and language processing systems.
+
+51:40.000 --> 51:44.000
+ Transaction processing systems.
+
+51:44.000 --> 51:48.000
+ E-commerce systems.
+
+51:48.000 --> 51:53.000
+ Reservation systems.
+
+51:53.000 --> 51:56.000
+ Language processing systems.
+
+51:56.000 --> 51:58.000
+ Compilers and commands.
+
+51:58.000 --> 52:17.000
+ Interpreters, I think I will also give an example to data processing applications.
+
+52:17.000 --> 52:23.000
+ For example, Google has data processing applications.
+
+52:23.000 --> 52:31.000
+ Let's say when they crawl websites, they are doing batch data processing.
+
+52:31.000 --> 52:37.000
+ So they are one of their type of application is data processing applications.
+
+52:37.000 --> 52:43.000
+ So for transaction processing applications, they are data centered applications.
+
+52:43.000 --> 52:49.000
+ And that process is used to request and update information in a system database.
+
+52:49.000 --> 52:53.000
+ For example, Facebook has transaction processing applications.
+
+52:53.000 --> 53:01.000
+ For event processing applications, I think autonomous cars or any system that is autonomous can be given.
+
+53:01.000 --> 53:12.000
+ Because they are processing the environment input.
+
+53:12.000 --> 53:20.000
+ So whatever happens, they are taking action based on what example you are.
+
+53:20.000 --> 53:26.000
+ Your car is moving on the street and then a car appears in front of you.
+
+53:26.000 --> 53:37.000
+ It is coming from another direction or it is starting to move when it was stationary.
+
+53:37.000 --> 53:43.000
+ That is event processing, event processing application.
+
+53:43.000 --> 53:47.000
+ And also there is language processing systems.
+
+53:47.000 --> 53:53.000
+ For example, this text to speech is also language processing system.
+
+53:53.000 --> 53:57.000
+ The opposite is also same.
+
+53:57.000 --> 54:02.000
+ As you know, we are already generating subtitles for our videos.
+
+54:02.000 --> 54:09.000
+ In that case, it is converting speech into the text.
+
+54:09.000 --> 54:14.000
+ So it is all there are both language processing systems.
+
+54:14.000 --> 54:21.000
+ Okay, let's continue. Okay, we have read it.
+
+54:21.000 --> 54:25.000
+ Transaction processing systems.
+
+54:25.000 --> 54:31.000
+ Process user requests for information from a database or requests to update the database.
+
+54:31.000 --> 54:39.000
+ From a user perspective, a transaction is.
+
+54:39.000 --> 54:45.000
+ Any coherent sequence of operations that satisfies a goal.
+
+54:45.000 --> 54:51.000
+ For example, find the times of flights from London to Paris.
+
+54:51.000 --> 54:57.000
+ Users make asynchronous requests for service which are then processed by a transaction manager.
+
+54:57.000 --> 55:01.000
+ Okay, so the structure of transaction processing applications.
+
+55:01.000 --> 55:06.000
+ Input output processing which gets the input from the user.
+
+55:06.000 --> 55:14.000
+ Application logic which turns the user input into the set of commands.
+
+55:14.000 --> 55:16.000
+ The transaction manager and database.
+
+55:16.000 --> 55:20.000
+ You see they are all double sided.
+
+55:20.000 --> 55:26.000
+ So transaction manager takes information from database and also sends information to database.
+
+55:26.000 --> 55:30.000
+ Same applies to all of them.
+
+55:30.000 --> 55:35.000
+ Okay, the software architecture of an ATM system.
+
+55:35.000 --> 55:45.000
+ So ATM system ATMs are the machines that we sent money or withdraw money or receive money and such.
+
+55:45.000 --> 55:48.000
+ So what are the inputs of an ATM?
+
+55:48.000 --> 55:58.000
+ Get customer account ID. We enter our, we may use cart.
+
+55:58.000 --> 56:03.000
+ We can do cart based transaction or we can do online based transaction.
+
+56:03.000 --> 56:07.000
+ So it can get customer account ID or validate cart.
+
+56:07.000 --> 56:12.000
+ And after these are done, then we select the service.
+
+56:12.000 --> 56:16.000
+ We are going to send money or receive money or withdraw money.
+
+56:16.000 --> 56:22.000
+ And our service request is processed by query account and update account.
+
+56:22.000 --> 56:29.000
+ Then output is the print details, return cart and dispense cash.
+
+56:29.000 --> 56:34.000
+ Okay, this is so simplistic overview of the system.
+
+56:34.000 --> 56:42.000
+ It is actually much more complex here than this of course.
+
+56:42.000 --> 56:47.000
+ Information systems architecture.
+
+56:47.000 --> 56:55.000
+ Information systems have a generic architecture that can be organized as a layered architecture.
+
+56:55.000 --> 57:03.000
+ These are transaction based systems as interaction with these systems generally involves database transactions.
+
+57:03.000 --> 57:15.000
+ So the layers include the user interface, user communications, information retrieval system database.
+
+57:15.000 --> 57:21.000
+ Okay, for example Google is an information system, Google search, I mean.
+
+57:21.000 --> 57:27.000
+ It has user interface, user communications, information system database.
+
+57:27.000 --> 57:35.000
+ Okay, layers of information system architecture. There is user interface, user communications, authentication and authorization.
+
+57:35.000 --> 57:39.000
+ Information retrieval and modification transaction management database.
+
+57:39.000 --> 57:45.000
+ The architecture of mental health care, pension management system.
+
+57:45.000 --> 57:48.000
+ So there is web browser.
+
+57:48.000 --> 57:57.000
+ Then you do login after login, it system does roll checking and then form and menu manager appears based on your roll.
+
+57:57.000 --> 58:03.000
+ And when you enter data or update data or delete data, the data information is done.
+
+58:03.000 --> 58:09.000
+ And in the lower level, there is security management, pension information managers.
+
+58:09.000 --> 58:12.000
+ Data important, export and report generation.
+
+58:12.000 --> 58:17.000
+ And at the very low level transaction management, pension database system.
+
+58:17.000 --> 58:27.000
+ Okay.
+
+58:27.000 --> 58:31.000
+ Web-based information systems.
+
+58:31.000 --> 58:41.000
+ Information and resource management systems are now usually web-based systems where the user interfaces are implemented using a web browser.
+
+58:41.000 --> 58:53.000
+ Why do you think this is becoming a need standard? Because web pages are available almost every device.
+
+58:53.000 --> 59:00.000
+ And when you update the web service, it is updated with all of the devices.
+
+59:00.000 --> 59:02.000
+ Okay.
+
+59:02.000 --> 59:07.000
+ So it is much easier to manage and update.
+
+59:07.000 --> 59:24.000
+ For example, e-commerce systems are internet-based resource management systems that accept electronic orders for goods or services and then arrange delivery of these goods or services to the customer.
+
+59:24.000 --> 59:34.000
+ In an e-commerce system, the application-specific layer includes additional functionality supporting a shopping cart in which users can place a number of items in separate transactions.
+
+59:34.000 --> 59:42.000
+ Then pay for them all together in a single transaction.
+
+59:42.000 --> 59:49.000
+ Server implementation.
+
+59:49.000 --> 59:57.000
+ These systems are often implemented as multi-tier client server architectures.
+
+59:57.000 --> 1:00:11.000
+ The web server is responsible for all user communications with the user interface implemented using a web browser.
+
+1:00:11.000 --> 1:00:21.000
+ The application server is responsible for implementing application-specific logic as well as information storage and retrieval requests.
+
+1:00:21.000 --> 1:00:31.000
+ The database server moves information to and from the database and handles transaction management.
+
+1:00:31.000 --> 1:00:36.000
+ Language processing systems.
+
+1:00:36.000 --> 1:00:45.000
+ Accept a natural or artificial language as input and generate some other representation of that language.
+
+1:00:45.000 --> 1:00:54.000
+ May include an interpreter to act on the instructions in the language that is being processed.
+
+1:00:54.000 --> 1:01:02.000
+ Used in situations where the easiest way to solve a problem is to describe an algorithm or describe the system data.
+
+1:01:02.000 --> 1:01:12.000
+ Meta case tools process tool descriptions, method rules, etc. and generate tools.
+
+1:01:12.000 --> 1:01:15.000
+ The architecture of a language processing system.
+
+1:01:15.000 --> 1:01:20.000
+ OK, so there is source language instructions, then there is translators.
+
+1:01:20.000 --> 1:01:36.000
+ Check syntax check somebody's generate and there is an abstract and see instructions, then there is interpreter which fetches and execute data and then results are provided to the user.
+
+1:01:36.000 --> 1:01:43.000
+ Compiler components.
+
+1:01:43.000 --> 1:01:49.000
+ Electrical analyzer which takes input language tokens and converts them to an internal form.
+
+1:01:49.000 --> 1:02:00.000
+ A symbol table which holds information about the names of entities, variables, class names, object names, etc. used in the text that is being translated.
+
+1:02:00.000 --> 1:02:05.000
+ A syntax analyzer which checks the syntax of the language being translated.
+
+1:02:05.000 --> 1:02:20.000
+ A syntax tree which is an internal structure representing the program being compiled.
+
+1:02:20.000 --> 1:02:29.000
+ A semantic analyzer that uses information from the syntax tree and the symbol table to check the semantic correctness of the input language text.
+
+1:02:29.000 --> 1:02:36.000
+ A code generator that walks the syntax tree and generates abstract machine code.
+
+1:02:36.000 --> 1:02:42.000
+ OK, so what is a compiler compiler? I mean what is a compiler?
+
+1:02:42.000 --> 1:02:52.000
+ Compilers are source values that converts the code into the machine code.
+
+1:02:52.000 --> 1:03:07.000
+ So machine can process that information. So let's give a more example.
+
+1:03:07.000 --> 1:03:17.000
+ I will give an example of C sharp compiler.
+
+1:03:17.000 --> 1:03:27.000
+ OK, so we write our code like this which is written in the English as you can see.
+
+1:03:27.000 --> 1:03:33.000
+ And then this code has to be compiled into the machine record.
+
+1:03:33.000 --> 1:03:35.000
+ OK, the machine cannot handle this.
+
+1:03:35.000 --> 1:03:42.000
+ What machine can handle is the CPU supporting commands.
+
+1:03:42.000 --> 1:03:50.000
+ So, and...
+
+1:03:50.000 --> 1:03:56.000
+ OK, let's read this.
+
+1:03:56.000 --> 1:04:02.000
+ Have you ever wondered what happens to your C sharp code when it runs on your computer?
+
+1:04:02.000 --> 1:04:04.000
+ Probably not, but it's worth a look.
+
+1:04:04.000 --> 1:04:14.000
+ A long time ago, when computer programming was in its infancy, programmers wrote programs in machine codes, language that the processor could understand.
+
+1:04:14.000 --> 1:04:16.000
+ It looked like this.
+
+1:04:16.000 --> 1:04:18.000
+ OK, yes, this is the machine code.
+
+1:04:18.000 --> 1:04:25.000
+ And one upper level of machine code is the assembly code.
+
+1:04:25.000 --> 1:04:35.000
+ Not exactly the easiest read, right? When writing machine codes, you tell the processor the exact address of the memory location at which to read and write data.
+
+1:04:35.000 --> 1:04:44.000
+ Every command is represented by a number, and because that isn't complicated enough, commands differ among different processors.
+
+1:04:44.000 --> 1:04:46.000
+ This is true.
+
+1:04:46.000 --> 1:04:57.000
+ Therefore, AMD is paying money to Intel for the 6 instructions set.
+
+1:04:57.000 --> 1:05:02.000
+ So, they can both run the windows on them.
+
+1:05:02.000 --> 1:05:10.000
+ To avoid this complexity, clever people started to invent abstractions and write programs on a higher level than the raw machine code.
+
+1:05:10.000 --> 1:05:19.000
+ They designed programming languages that allow you to write code without worrying about the under the hood stuff like memory management, how to handle different hardware,
+
+1:05:19.000 --> 1:05:24.000
+ and many other things that we as high level programmers may not even know about.
+
+1:05:24.000 --> 1:05:37.000
+ OK, so what happens to your code then compile it takes that code and turns it into the machine code, OK?
+
+1:05:37.000 --> 1:05:42.000
+ OK, so this is a really long article if you wonder that you can check it.
+
+1:05:42.000 --> 1:05:47.000
+ So here, the explaining thing is a compiler.
+
+1:05:47.000 --> 1:05:58.000
+ OK, so it takes the input language tokens and convert them to internal form and then symbol table which is all information about names of entities.
+
+1:05:58.000 --> 1:06:06.000
+ Such it is an extremely highly detailed and complex software we can say that.
+
+1:06:06.000 --> 1:06:13.000
+ I wonder if there is any information.
+
+1:06:13.000 --> 1:06:19.000
+ I wonder if there is any information.
+
+1:06:19.000 --> 1:06:34.000
+ OK, I think it's hard to find anyway, let's continue.
+
+1:06:34.000 --> 1:06:37.000
+ A pipe and filter compiler architecture.
+
+1:06:37.000 --> 1:06:40.000
+ OK, so there is first lexical analysis.
+
+1:06:40.000 --> 1:06:54.000
+ If you write incorrect data names variable types names, your compiler may give an error to you before start even compiling.
+
+1:06:54.000 --> 1:07:02.000
+ OK, so for each programming language, have the compiler behave different.
+
+1:07:02.000 --> 1:07:15.000
+ However, in every one of them, there is lexical analysis which takes symbol table, syntax tree, then there is synthetic analysis which also access symbol table, syntax tree, then there is semantic analysis.
+
+1:07:15.000 --> 1:07:18.000
+ And then a final, the code generation.
+
+1:07:18.000 --> 1:07:23.000
+ Repository architecture for a language processing system.
+
+1:07:23.000 --> 1:07:37.000
+ So there is predi-printed editor, lexical analyzer, syntax analyzers, semantic analyzer, optimizer, code changer and they are accessing the abstract syntax tree, grammar, definition, symbol table, definition.
+
+1:07:37.000 --> 1:07:45.000
+ So what are the key points of the chapters to this lecture?
+
+1:07:45.000 --> 1:07:56.000
+ Models of application systems architectures help us understand and compare applications, validate application system designs and assess large scale components for reuse.
+
+1:07:56.000 --> 1:08:06.000
+ Transaction processing systems are interactive systems that allow information in a database to be remotely accessed and modified by a number of users.
+
+1:08:06.000 --> 1:08:16.000
+ Language processing systems are used to translate texts from one language into another and to carry out the instruction specified in the input language.
+
+1:08:16.000 --> 1:08:26.000
+ They include a translator and an abstract machine that executes the generated language.
+
+1:08:26.000 --> 1:08:29.000
+ OK.
+
+1:08:29.000 --> 1:08:39.000
+ So.
+
+1:08:39.000 --> 1:08:43.000
+ All right, I think this is enough for today.
+
+1:08:43.000 --> 1:08:46.000
+ Hopefully, see you next week.
+
+1:08:46.000 --> 1:08:58.000
+ In your project, you will be needed to design such representations.
+
+1:08:58.000 --> 1:09:04.000
+ And, you know, the diagrams of your software.
+
+1:09:04.000 --> 1:09:11.000
+ So it will be like this. You will be needed to pick a project yourself.
+
+1:09:11.000 --> 1:09:13.000
+ It will be a programming project.
+
+1:09:13.000 --> 1:09:25.000
+ And based on your programming, based on your software, you will generate the, you know, design or the descriptions example.
+
+1:09:25.000 --> 1:09:32.000
+ Tabular design and such of your project, like we are seeing here.
+
+1:09:32.000 --> 1:09:34.000
+ OK.
+
+1:09:34.000 --> 1:09:37.000
+ I would like to explain the details later.
+
+1:09:37.000 --> 1:09:58.000
+ OK. So, hope you see you next week and our next week.
+

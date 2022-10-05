@@ -1,0 +1,1274 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+ Hello dear students, welcome to the lecture tonight of software engineering course.
+
+00:06.000 --> 00:09.000
+ So today's topic is...
+
+00:09.000 --> 00:12.000
+ Dependability and security specification.
+
+00:12.000 --> 00:16.000
+ Okay, the topics we are going to cover today are...
+
+00:16.000 --> 00:20.000
+ Risk-driven specification.
+
+00:20.000 --> 00:23.000
+ Safety specification.
+
+00:23.000 --> 00:26.000
+ Security specification.
+
+00:26.000 --> 00:29.000
+ Software reliability specification.
+
+00:29.000 --> 00:33.000
+ Okay, so let's start with...
+
+00:33.000 --> 00:37.000
+ Dependability requirements.
+
+00:37.000 --> 00:44.000
+ Functional requirements to define error checking and recovery facilities and protection against system failures.
+
+00:44.000 --> 00:50.000
+ Non-functional requirements defining the required reliability and availability of the system,
+
+00:50.000 --> 00:55.000
+ excluding requirements that define states and conditions that must not arise.
+
+00:55.000 --> 01:01.000
+ Okay, some of the students were confused with non-functional requirements.
+
+01:01.000 --> 01:08.000
+ You see, that is defining the required reliability and availability of the system,
+
+01:08.000 --> 01:16.000
+ and which will be non-functional requirements.
+
+01:16.000 --> 01:21.000
+ Okay, let's continue.
+
+01:21.000 --> 01:24.000
+ Risk-driven specification.
+
+01:24.000 --> 01:31.000
+ Critical system specification should be risk-driven.
+
+01:31.000 --> 01:36.000
+ This approach has been widely used in safety and security critical systems.
+
+01:36.000 --> 01:51.000
+ The aim of the specification process should be to understand the risks, safety, security, et cetera, faced by the system and to define requirements that reduce these risks.
+
+01:51.000 --> 01:54.000
+ Stages of risk-based analysis.
+
+01:54.000 --> 01:57.000
+ Okay, first risk identification.
+
+01:57.000 --> 02:00.000
+ Identify potential risks that may arise.
+
+02:00.000 --> 02:06.000
+ Risk analysis and classification assess the seriousness of each risk.
+
+02:06.000 --> 02:08.000
+ Risk decomposition.
+
+02:08.000 --> 02:10.000
+ Decommal decomposed risks.
+
+02:10.000 --> 02:13.000
+ To discover the potential root causes.
+
+02:13.000 --> 02:15.000
+ Risk reduction assessment.
+
+02:15.000 --> 02:20.000
+ Define how each risk must be taken into an eliminated or reduced
+
+02:20.000 --> 02:22.000
+ when the system is designed.
+
+02:22.000 --> 02:29.000
+ Okay, so the risk-driven specification is shown like this.
+
+02:29.000 --> 02:35.000
+ And one moment I will fix this.
+
+02:35.000 --> 02:40.000
+ Okay, so risk-driven specification.
+
+02:40.000 --> 02:45.000
+ You see there is risk identification and risk description.
+
+02:45.000 --> 02:50.000
+ Then there is risk analysis and risk assessment.
+
+02:50.000 --> 02:54.000
+ Risk decomposition root cause of analysis.
+
+02:54.000 --> 03:00.000
+ To say it correctly root cause analysis.
+
+03:00.000 --> 03:09.000
+ Okay, risk reduction and dependability requirements.
+
+03:09.000 --> 03:12.000
+ Faced risk analysis.
+
+03:12.000 --> 03:16.000
+ Preliminary risk analysis.
+
+03:16.000 --> 03:19.000
+ Identifies risks from the system's environment.
+
+03:19.000 --> 03:24.000
+ Aim is to develop an initial set of system security and dependability requirements.
+
+03:24.000 --> 03:27.000
+ Life cycle risk analysis.
+
+03:27.000 --> 03:36.000
+ Identifies risks that emerge during design and development e.g. risks that are associated with the technologies used for system construction.
+
+03:36.000 --> 03:41.000
+ Requirements are extended to protect against these risks.
+
+03:41.000 --> 03:44.000
+ Operational risk analysis.
+
+03:44.000 --> 03:49.000
+ Risk associated with the system user interface and operator errors.
+
+03:49.000 --> 03:57.000
+ Further protection requirements may be added to cope with these.
+
+03:57.000 --> 04:00.000
+ Safety specification.
+
+04:00.000 --> 04:03.000
+ Okay.
+
+04:03.000 --> 04:10.000
+ Goal is to identify protection requirements that ensure that system failures do not cause injury or death
+
+04:10.000 --> 04:14.000
+ or environmental damage.
+
+04:14.000 --> 04:18.000
+ Risk identification equals hazard identification.
+
+04:18.000 --> 04:21.000
+ Risk analysis equals hazard assessment.
+
+04:21.000 --> 04:25.000
+ Risk decomposition equals hazard analysis.
+
+04:25.000 --> 04:29.000
+ Risk reduction equals safety requirements specification.
+
+04:29.000 --> 04:32.000
+ Okay, so this is a much more explanative.
+
+04:32.000 --> 04:36.000
+ When you think as an hazard.
+
+04:36.000 --> 04:39.000
+ Risk identification equals hazard identification.
+
+04:39.000 --> 04:42.000
+ Risk analysis equals hazard assessment.
+
+04:42.000 --> 04:45.000
+ Risk decomposition equals hazard analysis.
+
+04:45.000 --> 04:49.000
+ Risk reduction equals safety requirements specification.
+
+04:49.000 --> 04:56.000
+ Okay.
+
+04:56.000 --> 05:01.000
+ Hazard identification.
+
+05:01.000 --> 05:05.000
+ Identify the hazards that may threaten the system.
+
+05:05.000 --> 05:09.000
+ Hazard identification may be based on different types of hazard.
+
+05:09.000 --> 05:18.000
+ Physical hazards, electrical hazards, biological hazards, service failure hazards, etc.
+
+05:18.000 --> 05:20.000
+ Insulin pump risks.
+
+05:20.000 --> 05:23.000
+ You see, they develop an insulin pump.
+
+05:23.000 --> 05:29.000
+ They also analyze assess the risks that comes with the system.
+
+05:29.000 --> 05:33.000
+ It is extremely important.
+
+05:33.000 --> 05:36.000
+ Insulin overdose, service failure.
+
+05:36.000 --> 05:39.000
+ Insulin underdose, service failure.
+
+05:39.000 --> 05:42.000
+ Power failure due to exhausted battery electrical.
+
+05:42.000 --> 05:46.000
+ Electrical interference with other medical equipment electrical.
+
+05:46.000 --> 05:49.000
+ Poor sensor and actuator contact physical.
+
+05:49.000 --> 05:52.000
+ Parts of machine break off in body physical.
+
+05:52.000 --> 05:56.000
+ Infection caused by introduction of machine biological.
+
+05:56.000 --> 06:00.000
+ Allurgic reaction to materials or insulin biological.
+
+06:00.000 --> 06:11.000
+ You see, they are separated by the related categories such as service failure, electrical, physical biology.
+
+06:11.000 --> 06:15.000
+ Hazard assessment.
+
+06:15.000 --> 06:20.000
+ The process is concerned with understanding the likelihood that a risk will arise
+
+06:20.000 --> 06:25.000
+ and the potential consequences if an accident or incident should occur.
+
+06:25.000 --> 06:31.000
+ Risks may be categorized as.
+
+06:31.000 --> 06:36.000
+ Intolerable must never arise or result in an accident.
+
+06:36.000 --> 06:46.000
+ As low as reasonably practical ALARP must minimize the possibility of risk given cost and schedule constraints.
+
+06:46.000 --> 06:52.000
+ Acceptable, the consequences of the risk are acceptable and no extra cost should be incurred
+
+06:52.000 --> 06:55.000
+ to reduce hazard probability.
+
+06:55.000 --> 06:57.000
+ The risk triangle is like this.
+
+06:57.000 --> 07:04.000
+ You see ALARP region, which is as low as reasonably practical.
+
+07:04.000 --> 07:10.000
+ Risk tolerated only if risk deduction is in practical or excessive the expansive desire.
+
+07:10.000 --> 07:21.000
+ And there is acceptable region, this area, negligible risk and at the very top or the bottom of the reverse.
+
+07:21.000 --> 07:25.000
+ The triangle, unacceptable region, this cannot be tolerated.
+
+07:25.000 --> 07:27.000
+ Such as it may lead to that.
+
+07:27.000 --> 07:33.000
+ When you overdose the patient, it may result in death.
+
+07:33.000 --> 07:39.000
+ Therefore, it is unacceptable.
+
+07:39.000 --> 07:46.000
+ Social acceptability of risk.
+
+07:46.000 --> 07:52.000
+ The acceptability of a risk is determined by human, social and political considerations.
+
+07:52.000 --> 08:03.000
+ In most societies, the boundaries between the regions are pushed upwards with time i.e. society is less willing to accept risk.
+
+08:03.000 --> 08:15.000
+ For example, the costs of cleaning up pollution may be less than the costs of preventing it but this may not be socially acceptable.
+
+08:15.000 --> 08:19.000
+ Risk assessment is subjective.
+
+08:19.000 --> 08:23.000
+ Risks are identified as probable, unlikely, etc.
+
+08:23.000 --> 08:26.000
+ This depends on who is making the assessment.
+
+08:26.000 --> 08:32.000
+ So the use of risk assessment is subjective, it is not very much objective.
+
+08:32.000 --> 08:47.000
+ However, you may follow some approaches to have somewhat balanced or more objective this assessment.
+
+08:47.000 --> 08:50.000
+ Estimate the risk probability and the risk severity.
+
+08:50.000 --> 08:58.000
+ It is not normally possible to do this precisely so relative values are used such as unlikely, rare, very high, etc.
+
+08:58.000 --> 09:08.000
+ etc. the aim must be to exclude risks that are likely to arise or that have high severity.
+
+09:08.000 --> 09:12.000
+ Risk classification for the insulin pump.
+
+09:12.000 --> 09:34.000
+ Okay, the first column is identified as second one is hazard probability, third is accident severity, fourth is estimated risk.
+
+09:34.000 --> 09:44.000
+ One, insulin overdose computation medium high high intolerable.
+
+09:44.000 --> 10:03.000
+ Two, insulin underdose computation.
+
+10:03.000 --> 10:17.000
+ So you see underdose computation doesn't necessarily harm or let's say, doesn't necessarily induce acute harm.
+
+10:17.000 --> 10:23.000
+ Therefore, the accident severity is low, therefore it is acceptable.
+
+10:23.000 --> 10:31.000
+ Payed of hard laboration system, it may have medium chance and accident severity is medium.
+
+10:31.000 --> 10:41.000
+ Therefore, it is estimated risk is low, however, this time it is not acceptable, but ARP.
+
+10:41.000 --> 10:52.000
+ Because the accident severity is also not low, it is accident severity is medium, not low, therefore it is a bit more unacceptable than acceptable.
+
+10:52.000 --> 10:58.000
+ Power failure hazard probability is high, it may happen.
+
+10:58.000 --> 11:04.000
+ Commonly accident severity is low, therefore the estimated risk is low, acceptable.
+
+11:04.000 --> 11:16.000
+ Machine incorrectly fitted hazard probability high, accident severity high, therefore estimated risk is high, therefore it is intolerable.
+
+11:16.000 --> 11:34.000
+ The machine breaks in patient hazard probability low, so it may happen rarely, accident severity is high, therefore estimated risk is medium, therefore it is ARP.
+
+11:34.000 --> 11:42.000
+ Machine causes infection hazard probability medium, accident severity medium, estimated risk is medium.
+
+11:42.000 --> 11:48.000
+ Electrical inference, low high, medium, energy creation, low, low, acceptable.
+
+11:48.000 --> 11:56.000
+ So, I will add this to your course.
+
+11:56.000 --> 12:08.000
+ I mean your semester project requirement.
+
+12:08.000 --> 12:14.000
+ As a project it is okay.
+
+12:14.000 --> 12:22.000
+ So, we have also added some more independent lecture if you remember.
+
+12:22.000 --> 12:42.000
+ So, let's call it as,
+
+12:42.000 --> 13:08.000
+ okay.
+
+13:08.000 --> 13:18.000
+ All right, let's continue.
+
+13:18.000 --> 13:24.000
+ Hazard analysis
+
+13:24.000 --> 13:36.000
+ Concerned with discovering the root causes of risks in a particular system, techniques have been mostly derived from safety critical systems and can be.
+
+13:36.000 --> 13:40.000
+ Inductive, bottom-up techniques.
+
+13:40.000 --> 13:48.000
+ Start with a proposed system failure and assess the hazards that could arise from that failure, deductive, top-down techniques.
+
+13:48.000 --> 13:54.000
+ Start with a hazard and deduce what the causes of this could be.
+
+13:54.000 --> 14:00.000
+ Fault tree analysis
+
+14:00.000 --> 14:08.000
+ A deductive top-down technique, put the risk or hazard at the root of the tree and identify the system states that could lead to that hazard.
+
+14:08.000 --> 14:14.000
+ Where appropriate lengthies with and or conditions.
+
+14:14.000 --> 14:24.000
+ A goal should be to minimize the number of single causes of system failure.
+
+14:24.000 --> 14:28.000
+ An example of a software fault tree.
+
+14:28.000 --> 14:34.000
+ So, it starts from top and goes to the bottom in here.
+
+14:34.000 --> 14:38.000
+ I think incorrect insulin dose administered.
+
+14:38.000 --> 14:50.000
+ So, the error here is incorrect insulin dose administration and then it starts branching and calculating how might it happen.
+
+14:50.000 --> 14:58.000
+ So, it may happen due to one of these three reasons you see there or incorrect sugar level measured.
+
+14:58.000 --> 15:02.000
+ Correct dose delivered at the wrong time delivery system failure.
+
+15:02.000 --> 15:08.000
+ So, each of these error may cause incorrect insulin dose administration.
+
+15:08.000 --> 15:16.000
+ So, incorrect sugar level measured can be caused by two errors which are sensor failure or sugar computation error.
+
+15:16.000 --> 15:22.000
+ Then the sugar computation error may be caused by two different errors.
+
+15:22.000 --> 15:26.000
+ Which are algorithm error or arithmetic error.
+
+15:26.000 --> 15:30.000
+ The correct dose delivered at the wrong time may be happening.
+
+15:30.000 --> 15:32.000
+ Maybe caused by the timer failure.
+
+15:32.000 --> 15:36.000
+ The delivery system failure may be caused by two different errors.
+
+15:36.000 --> 15:42.000
+ First one is insulin computation is incorrect or prompt thickness incorrect.
+
+15:42.000 --> 15:50.000
+ Some computation incorrect may be caused by two different errors which are algorithm error and arithmetic error.
+
+15:50.000 --> 16:18.000
+ Next add this to your project.
+
+16:18.000 --> 16:20.000
+ Page.
+
+16:36.000 --> 16:38.000
+ Fault tree analysis.
+
+16:38.000 --> 16:44.000
+ Three possible conditions that can lead to delivery of incorrect dose of insulin.
+
+16:44.000 --> 16:56.000
+ Incorrect measurement of blood sugar level failure of delivery system dose delivered at wrong time.
+
+16:56.000 --> 17:04.000
+ By analysis of the fault tree, root causes of these hazards related to software are.
+
+17:04.000 --> 17:10.000
+ Algorithm error or arithmetic error.
+
+17:10.000 --> 17:16.000
+ Risk reduction.
+
+17:16.000 --> 17:26.000
+ The aim of this process is to identify dependability requirements that specify how the risk should be managed and ensure that accidents incidents do not arise.
+
+17:26.000 --> 17:34.000
+ Risk reduction strategies risk avoidance, risk detection and removal, damage limitation.
+
+17:34.000 --> 17:40.000
+ You see there are three strategies that we can apply risk avoidance which is best.
+
+17:40.000 --> 17:44.000
+ We avoid risk if possible risk detection and removal.
+
+17:44.000 --> 17:52.000
+ This is about taking the risk and removing it before the actual damage is done.
+
+17:52.000 --> 18:00.000
+ And the last one is the risk happens but we try to limit it damage.
+
+18:00.000 --> 18:02.000
+ Strategy use.
+
+18:02.000 --> 18:10.000
+ Normally in critical systems, a mix of risk reduction strategies are used.
+
+18:10.000 --> 18:18.000
+ In a chemical plant control system, the system will include sensors to detect and correct excess pressure in the reactor.
+
+18:18.000 --> 18:26.000
+ However, it will also include an independent protection system that opens a relief valve if dangerously high pressure is detected.
+
+18:26.000 --> 18:32.000
+ So you see it is mix of strategies.
+
+18:32.000 --> 18:40.000
+ The first strategy is the system will include sensors to detect and correct excess pressure in the reactor.
+
+18:40.000 --> 18:42.000
+ Which is the detection and removal.
+
+18:42.000 --> 18:45.000
+ And the third one is damage limitation.
+
+18:45.000 --> 18:52.000
+ However, it will also include an independent protection system that opens a relief valve if dangerously high pressure is detected.
+
+18:52.000 --> 19:00.000
+ Incel and pump, software risks.
+
+19:00.000 --> 19:06.000
+ A arithmetic error a computation causes the value of a variable to overflow or underflow.
+
+19:06.000 --> 19:12.000
+ Maybe include an exception handler for each type of arithmetic error.
+
+19:12.000 --> 19:18.000
+ Algorithmic error compare dose to be delivered with previous dose or safe maximum doses.
+
+19:18.000 --> 19:24.000
+ Reduce dose if too high.
+
+19:24.000 --> 19:30.000
+ Examples of safety requirements.
+
+19:30.000 --> 19:52.000
+ Okay, one more time.
+
+19:52.000 --> 20:00.000
+ State Route 1, the system shall not deliver a single dose of insulin that is greater than a specified maximum dose for a system user.
+
+20:00.000 --> 20:10.000
+ State Route 2, the system shall not deliver a daily cumulative dose of insulin that is greater than a specified maximum daily dose for a system user.
+
+20:10.000 --> 20:23.000
+ State Route 3, the system shall include a hardware diagnostic facility that shall be executed at least four times per hour.
+
+20:23.000 --> 20:27.000
+ State Route 4, the system shall include an exception handler for all of the exceptions that are identified in Table 3.
+
+20:27.000 --> 20:38.000
+ State Route 5, the audible alarm shall be sounded when any hardware or software anomaly is discovered in a diagnostic message as defined in Table 4 shall be displayed.
+
+20:38.000 --> 20:48.000
+ State Route 6, in the event of an alarm, insulin delivery shall be suspended until the user has reset the system and cleared the alarm.
+
+20:48.000 --> 21:08.000
+ UsVDs are the safe requirements that are defined to prevent incidents or harm or damage. So that's it. Something like to use to your project as well.
+
+21:08.000 --> 21:23.000
+ Prepare an example solve.
+
+21:23.000 --> 21:41.000
+ Prepare an example of safety requirements such as for your system.
+
+21:41.000 --> 21:55.000
+ So the key points of the first part is like here, let's read it.
+
+21:55.000 --> 22:02.000
+ Risk analysis is an important activity in the specification of security and dependability requirements.
+
+22:02.000 --> 22:13.000
+ It involves identifying risks that can result in accidents or incidents. A hazard driven approach may be used to understand the safety requirements for a system.
+
+22:13.000 --> 22:21.000
+ You identify potential hazards and decompose these using methods such as fault tree analysis to discover their root causes.
+
+22:21.000 --> 22:32.000
+ Safety requirements should be included to ensure that hazards and accidents do not arise or if this is impossible to limit the damage caused by system failure.
+
+22:32.000 --> 22:51.000
+ So your system that you are going to develop for this course may not have health hazard or such harmful hazard. However, you can still define risk requirements.
+
+22:51.000 --> 23:06.000
+ Those risks may not be very important, but there will be still some risks that can bother the users that can affect the user and you should define them.
+
+23:06.000 --> 23:24.000
+ So any system for every system can be defined.
+
+23:24.000 --> 23:30.000
+ System reliability specification
+
+23:30.000 --> 23:38.000
+ Reliability is a measurable system attribute so non-functional reliability requirements may be specified quantitatively.
+
+23:38.000 --> 23:46.000
+ These define the number of failures that are acceptable during normal use of the system or the time in which the system must be available.
+
+23:46.000 --> 23:57.000
+ Functional reliability requirements define system and software functions that avoid, detect or tolerate faults in the software and so ensure that these faults do not lead to system failure.
+
+23:57.000 --> 24:05.000
+ Software reliability requirements may also be included to cope with hardware failure or operator error.
+
+24:05.000 --> 24:15.000
+ Reliability specification process risk identification.
+
+24:15.000 --> 24:20.000
+ Identified types of system failure that may lead to economic losses.
+
+24:20.000 --> 24:38.000
+ So let's say you are developing a commerce website. This can be defined. You are developing a suitable management system. This can be defined for any system. You are developing a game. This can be defined.
+
+24:38.000 --> 24:41.000
+ Risk analysis.
+
+24:41.000 --> 24:51.000
+ Estimate the costs and consequences of the different types of software failure.
+
+24:51.000 --> 24:54.000
+ Risk decomposition.
+
+24:54.000 --> 25:02.000
+ Identify the root causes of system failure.
+
+25:02.000 --> 25:10.000
+ Generate reliability specifications including quantitative requirements defining the acceptable levels of failure.
+
+25:10.000 --> 25:15.000
+ Okay, types of system failure. So that is system failure types.
+
+25:15.000 --> 25:17.000
+ Failure type on description.
+
+25:17.000 --> 25:22.000
+ Lof of service. Okay.
+
+25:22.000 --> 25:32.000
+ The system is unavailable and cannot deliver its services to users. You may separate this into loss of critical services and loss of non-critical services,
+
+25:32.000 --> 25:45.000
+ or the consequences of a failure in non-critical services or less than the consequences of critical service failure.
+
+25:45.000 --> 25:58.000
+ The system does not deliver a service correctly to users. Again, this may be specified in terms of minor and major errors or errors in the delivery of critical and non-critical services.
+
+25:58.000 --> 26:05.000
+ And system data system or data corruption.
+
+26:05.000 --> 26:10.000
+ The failure of the system causes damage to the system itself or its data.
+
+26:10.000 --> 26:17.000
+ This will usually but not necessarily be in conjunction with other types of failures.
+
+26:17.000 --> 26:26.000
+ All right, and then as reliable metrics.
+
+26:26.000 --> 26:30.000
+ Reliability metrics are units of measurement of system reliability.
+
+26:30.000 --> 26:36.000
+ System reliability is measured by counting the number of operational failures and where appropriate,
+
+26:36.000 --> 26:42.000
+ relating these to the demands made on the system and the time that the system has been operational.
+
+26:42.000 --> 26:48.000
+ A long-term measurement program is required to assess the reliability of critical systems.
+
+26:48.000 --> 27:00.000
+ Okay, what metrics are you using, probability of failure on demand, rate of occurrence of failures mean time to failure, available to you.
+
+27:00.000 --> 27:02.000
+ Okay.
+
+27:02.000 --> 27:07.000
+ Probability of failure on demand, POFOD.
+
+27:07.000 --> 27:12.000
+ This is the probability that the system will fail when a service request is made.
+
+27:12.000 --> 27:17.000
+ Useful when demands for service are intermittent and relatively infrequent.
+
+27:17.000 --> 27:25.000
+ Appropriate for protection systems where services are demanded occasionally and where there are serious consequences if the service is not delivered.
+
+27:25.000 --> 27:31.000
+ Relevant for many safety critical systems with exception management components.
+
+27:31.000 --> 27:36.000
+ Okay, for example, emergency shutdown system in a chemical plot.
+
+27:36.000 --> 27:39.000
+ You see, this is how it is important.
+
+27:39.000 --> 27:44.000
+ This may never be used, therefore it is very infrequently used.
+
+27:44.000 --> 27:54.000
+ However, when it is necessary, failure of this system would cause catastrophic damage.
+
+27:54.000 --> 28:03.000
+ Okay, so you see how it is important for a probability of failure on demand.
+
+28:03.000 --> 28:10.000
+ Rate of fault occurrence, ROCOF.
+
+28:10.000 --> 28:24.000
+ Reflects the rate of occurrence of failure in the system, ROCOF of 0.002 means two failures are likely in each 1,000 operational time units EG, two failures per 1,000 hours of operation.
+
+28:24.000 --> 28:34.000
+ Relevant for systems where the system has to process a large number of similar requests in a short time credit card processing system, airline booking system,
+
+28:34.000 --> 28:46.000
+ reciprocal of ROCOF is mean time to failure, MTTF, relevant for systems with long transactions, i.e. where system processing takes a long time EG CAD systems.
+
+28:46.000 --> 28:51.000
+ MTTF should be longer than expected transaction length.
+
+28:51.000 --> 28:56.000
+ Okay, available at you.
+
+28:56.000 --> 29:01.000
+ Measure of the fraction of the time that the system is available for use.
+
+29:01.000 --> 29:12.000
+ Takes repair and restart time into account availability of 0.998 means software is available for 998 out of 1,000 time units.
+
+29:12.000 --> 29:25.000
+ Relevant for non-stop continuously running systems telephone switching systems railway signaling systems.
+
+29:25.000 --> 29:41.000
+ Available to specifications so that are available to you see 0.9, 0.99, 0.99, 0.99, so the explanation of 0.9.
+
+29:41.000 --> 29:45.000
+ The system is available for 90% of the time.
+
+29:45.000 --> 29:57.000
+ This means that in a 24 hour period 1,440 minutes the system will be unavailable for 144 minutes.
+
+29:57.000 --> 30:03.000
+ In a 24 hour period the system is unavailable for 14.4 minutes.
+
+30:03.000 --> 30:10.000
+ The system is unavailable for 84 seconds in a 24 hour period.
+
+30:10.000 --> 30:20.000
+ Roughly 1 minute per week.
+
+30:20.000 --> 30:25.000
+ Failure consequences
+
+30:25.000 --> 30:33.000
+ When specifying reliability it is not just the number of system failures that matter but the consequences of these failures.
+
+30:33.000 --> 30:41.000
+ Failures that have serious consequences are clearly more damaging than those where repair and recovery is straightforward.
+
+30:41.000 --> 30:55.000
+ In some cases therefore different reliability specifications for different types of failure may be defined.
+
+30:55.000 --> 31:01.000
+ Overspecification of reliability
+
+31:01.000 --> 31:09.000
+ Overspecification of reliability is a situation where a high level of reliability is specified but it is not cost effective to achieve this.
+
+31:09.000 --> 31:15.000
+ In many cases it is cheaper to accept and deal with failures rather than avoid them occurring.
+
+31:15.000 --> 31:22.000
+ To avoid overspecification specify reliability requirements for different types of failure.
+
+31:22.000 --> 31:32.000
+ Miner failures may be acceptable. Specify requirements for different services separately.
+
+31:32.000 --> 31:36.000
+ Crickle services should have the highest reliability requirements.
+
+31:36.000 --> 31:42.000
+ Decide whether or not high reliability is really required or if dependability goals can be achieved in some other way.
+
+31:42.000 --> 31:52.000
+ We need to balance between the reliability and cost of the reliability.
+
+31:52.000 --> 31:59.000
+ Therefore in many cases it is cheaper to accept and deal with failures rather than avoid them occurring.
+
+31:59.000 --> 32:09.000
+ If the occurring of event is 1 in a million it may be not practical or cost effective to avoid it.
+
+32:09.000 --> 32:19.000
+ It may be just easier to accept it and when it happens pay the costs.
+
+32:19.000 --> 32:24.000
+ Steps to a reliability specification.
+
+32:24.000 --> 32:30.000
+ For each subsystem analyze the consequences of possible system failures.
+
+32:30.000 --> 32:35.000
+ From the system failure analysis partition failures into appropriate classes.
+
+32:35.000 --> 32:41.000
+ For each failure class identified set out the reliability using an appropriate metric.
+
+32:41.000 --> 32:46.000
+ Different metrics may be used for different reliability requirements.
+
+32:46.000 --> 32:55.000
+ Identify functional reliability requirements to reduce the chances of critical failures.
+
+32:55.000 --> 33:00.000
+ Insulin pump specification.
+
+33:00.000 --> 33:05.000
+ Probability of failure P-O-F-O-D is the most appropriate metric.
+
+33:05.000 --> 33:11.000
+ Transient failures that can be repaired by user actions such as recalibration of the machine.
+
+33:11.000 --> 33:21.000
+ A relatively low value of P-O-F-O-D is acceptable, say 0.002, one failure may occur in every 500 demands.
+
+33:21.000 --> 33:27.000
+ Permanent failures require the software to be reinstalled by the manufacturer.
+
+33:27.000 --> 33:40.000
+ This should occur no more than once per year. P-O-F-O-D for this situation should be less than 0.002.
+
+33:40.000 --> 33:44.000
+ Functional reliability requirements.
+
+33:44.000 --> 33:51.000
+ Checking requirements that identify checks to ensure that incorrect data is detected before it leads to a failure.
+
+33:51.000 --> 33:57.000
+ Recovery requirements that are geared to help the system recover after a failure has occurred.
+
+33:57.000 --> 34:03.000
+ Redundancy requirements that specify redundant features of the system to be included.
+
+34:03.000 --> 34:14.000
+ Process requirements for reliability which specify the development process to be used may also be included.
+
+34:14.000 --> 34:27.000
+ Examples of functional reliability requirements for MHCPMS.
+
+34:27.000 --> 34:38.000
+ R-R-1, a predefined range for all operator inputs shall be defined and the system shall check that all operator inputs fall within this predefined range.
+
+34:38.000 --> 34:46.000
+ Checking R-R-2 copies of the patient database shall be maintained on two separate servers that are not housed in the same building.
+
+34:46.000 --> 34:54.000
+ Recovery, redundancy, R-R-3, and version programming shall be used to implement the breaking control system.
+
+34:54.000 --> 35:07.000
+ Redundancy, R-R-4, the system must be implemented in a safe subset of ADA and checked using static analysis. Process.
+
+35:25.000 --> 35:44.000
+ All night.
+
+35:44.000 --> 35:50.000
+ Security specification
+
+35:50.000 --> 36:00.000
+ Security specification has something in common with safety requirements specification in both cases your concern is to avoid something bad happening.
+
+36:00.000 --> 36:05.000
+ Four major differences.
+
+36:05.000 --> 36:11.000
+ Safety problems are accidental, the software is not operating in a hostile environment.
+
+36:11.000 --> 36:18.000
+ In security, you must assume that attackers have knowledge of system weaknesses.
+
+36:18.000 --> 36:24.000
+ When safety failures occur, you can look for the root cause or weakness that led to the failure.
+
+36:24.000 --> 36:31.000
+ When failure results from a deliberate attack, the attacker may conceal the cause of the failure.
+
+36:31.000 --> 36:36.000
+ Shudding down a system can avoid a safety-related failure.
+
+36:36.000 --> 36:41.000
+ Causing a shut down may be the aim of an attack.
+
+36:41.000 --> 36:51.000
+ Safety-related events are not generated from an intelligent adversary, and attacker can probe defenses over time to discover weaknesses.
+
+36:51.000 --> 36:56.000
+ Okay, type of security requirements. Let's see the types.
+
+36:56.000 --> 37:09.000
+ Identification requirements, authentication requirements, authorization requirements, immunity requirements, integrity requirements, intrusion detection requirements,
+
+37:09.000 --> 37:25.000
+ non-reputiation requirements, privacy requirements, security auditing requirements, system maintenance security requirements.
+
+37:25.000 --> 37:30.000
+ The preliminary risk assessment process for security requirements.
+
+37:30.000 --> 37:41.000
+ Start with asset identification. First, you need to know your assets, then you need to asset value assessment, threat identification, threat identification,
+
+37:41.000 --> 37:50.000
+ then from threat identification, attack assessment, and from attack assessment, you need to control identification,
+
+37:50.000 --> 38:00.000
+ then you need to make physical assessment of that control identification of that control, then from attack assessment, you need to make security requirement,
+
+38:00.000 --> 38:09.000
+ definition, and you need to consider physical assessment as well, then from asset value assessment, asset value assessment,
+
+38:09.000 --> 38:25.000
+ you need to calculate exposure assessment, and based on exposure assessment, attack assessment, and physical assessment, you need to define security requirement, definition, okay.
+
+38:25.000 --> 38:27.000
+ Security risk assessment.
+
+38:27.000 --> 38:33.000
+ It starts with asset identification.
+
+38:33.000 --> 38:52.000
+ Identify the key system assets or services that have to be protected, asset value assessment, estimate the value of the identified assets, exposure assessment,
+
+38:52.000 --> 39:01.000
+ assess the potential losses associated with each asset, threat identification,
+
+39:01.000 --> 39:16.000
+ identify the most probable threats to the system assets, security risk assessment, attack assessment,
+
+39:16.000 --> 39:24.000
+ decompose threats into possible attacks on the system and the ways that these may occur, control identification,
+
+39:24.000 --> 39:39.000
+ propose the controls that may be put in place to protect an asset, feasibility assessment, assess the technical feasibility and cost of the controls,
+
+39:39.000 --> 39:53.000
+ security requirements definition, defined system security requirements, these can be infrastructure or application system requirements,
+
+39:53.000 --> 40:01.000
+ asset analysis in a preliminary risk assessment report for the MHCPMS.
+
+40:01.000 --> 40:09.000
+ Okay, so the asset, for example, the information system, it's an asset or service, the value is,
+
+40:09.000 --> 40:23.000
+ high required to support all clinical consultations, potentially safety critical.
+
+40:23.000 --> 40:37.000
+ High financial loss is clinics may have to be canceled, costs of restoring system, possible patient harm if treatment cannot be prescribed.
+
+40:37.000 --> 40:41.000
+ Okay, an individual patient's records.
+
+40:41.000 --> 40:43.000
+ Okay, this is an asset.
+
+40:43.000 --> 40:50.000
+ High required to support all clinical consultations, potentially safety critical.
+
+40:50.000 --> 40:54.000
+ Okay, the exposure.
+
+40:54.000 --> 41:00.000
+ High financial loss is clinics may have to be canceled, costs of restoring system,
+
+41:00.000 --> 41:09.000
+ possible patient harm if treatment cannot be prescribed.
+
+41:09.000 --> 41:12.000
+ Okay, an individual patient's records.
+
+41:12.000 --> 41:18.000
+ Each individual patient's record is an also is also an asset.
+
+41:18.000 --> 41:32.000
+ Yeah, you see high profile patients may cause a lot of trouble than some random patients.
+
+41:32.000 --> 41:38.000
+ Okay, the exposure will be low of direct losses, but possible loss of reputation.
+
+41:38.000 --> 41:46.000
+ If certain if that patient is a high profile patient.
+
+41:46.000 --> 41:58.000
+ Threat and control analysis in a preliminary risk assessment report.
+
+41:58.000 --> 42:08.000
+ Unauthorized user gains access as system manager and makes system unavailable low only allow system management from specific locations that are physically secure.
+
+42:08.000 --> 42:17.000
+ Low cost of implementation, but care must be taken with key distribution and to ensure that keys are available in the event of an emergency.
+
+42:17.000 --> 42:24.000
+ Okay, so the threat is this, the probability is low, the control for the threat and the feasibility of the control.
+
+42:24.000 --> 42:29.000
+ You see not only control, but also the feasibility of the control is important.
+
+42:29.000 --> 42:37.000
+ For controlling only allow system management from specific locations that are physically secure. Okay, this is making sense.
+
+42:37.000 --> 42:50.000
+ However, if it is it feasible, low cost of implementation, but care must be taken with key distribution and to ensure that keys are available in the event of an emergency.
+
+42:50.000 --> 43:05.000
+ Okay, the threat, unauthorized user gains access as system user and access is confidential information. The probability is high because people may be using weak passports or.
+
+43:05.000 --> 43:20.000
+ One of your employees password may be weak or such require all users to authenticate themselves using biometric mechanism, block all changes to patient information to track system usage.
+
+43:20.000 --> 43:35.000
+ Basically feasible but high cost solution possible to use the resistance, this is simple and transparent to implement and also support recovery. You see the first control is very hard to implement, it is not much feasible.
+
+43:35.000 --> 43:54.000
+ We cannot get biometric from patients, however, the second one, logging is extremely simple and easy, therefore it should be implemented.
+
+43:54.000 --> 44:19.000
+ I think we can add this to your project as well.
+
+44:19.000 --> 44:37.000
+ The page is set and control as is in the premise assessment for your systems such as explaining page for the six.
+
+44:37.000 --> 44:43.000
+ Okay, secure the policy.
+
+44:43.000 --> 44:50.000
+ An organizational security policy applies to all systems and sets out what should and should not be allowed.
+
+44:50.000 --> 44:59.000
+ For example, a military policy might be readers may only examine documents whose classification is the same as or below the readers vetting level.
+
+44:59.000 --> 45:10.000
+ A security policy sets out the conditions that must be maintained by a security system and so helps identify system security requirements.
+
+45:10.000 --> 45:13.000
+ Okay.
+
+45:13.000 --> 45:18.000
+ Security requirements for the MHCPMS.
+
+45:18.000 --> 45:27.000
+ Patient information shall be downloaded at the start of a clinic session to a secure area on the system client that is used by clinical staff.
+
+45:27.000 --> 45:31.000
+ All patient information on the system client shall be encrypted.
+
+45:31.000 --> 45:38.000
+ Patient information shall be uploaded to the database after a clinic session has finished and deleted from the client computer.
+
+45:38.000 --> 45:46.000
+ A log on a separate computer from the database server must be maintained of all changes made to the system database.
+
+45:46.000 --> 45:50.000
+ Okay, so you see these are the security requirements.
+
+45:50.000 --> 46:07.000
+ And you have to make sure that you are following these to have secure system in mental health care patient management system.
+
+46:07.000 --> 46:12.000
+ Formal specification.
+
+46:12.000 --> 46:18.000
+ Formal specification is part of a more general collection of techniques that are known as formal methods.
+
+46:18.000 --> 46:23.000
+ These are all based on mathematical representation and analysis of software.
+
+46:23.000 --> 46:36.000
+ Formal methods include formal specification, specification analysis and proof, transformational development, program verification.
+
+46:36.000 --> 46:40.000
+ Use of formal methods.
+
+46:40.000 --> 46:46.000
+ The principal benefits of formal methods are in reducing the number of faults in systems.
+
+46:46.000 --> 46:52.000
+ Consequently, their main area of applicability is in critical systems engineering.
+
+46:52.000 --> 46:57.000
+ There have been several successful projects where formal methods have been used in this area.
+
+46:57.000 --> 47:08.000
+ In this area, the use of formal methods is most likely to be cost effective because high system failure costs must be avoided.
+
+47:08.000 --> 47:13.000
+ Specification in the software process.
+
+47:13.000 --> 47:17.000
+ Specification and design are inextricably intermingled.
+
+47:17.000 --> 47:27.000
+ Architectural design is essential to structure a specification and the specification process.
+
+47:27.000 --> 47:32.000
+ Formal specifications are expressed in a mathematical notation with precisely defined vocabulary, syntax and semantics.
+
+47:32.000 --> 47:37.000
+ Formal specification in a planned based software process.
+
+47:37.000 --> 47:48.000
+ Increasing contractor involvement from left to right, decreasing client involvement and specification design.
+
+47:48.000 --> 47:53.000
+ So, user requirements definition in this area we are doing specification.
+
+47:53.000 --> 47:58.000
+ We are increasing contractor involvement and decreasing client involvement.
+
+47:58.000 --> 48:07.000
+ As we go to the right and from user requirements, we involve clients of course from system requirements.
+
+48:07.000 --> 48:17.000
+ We lesser involve users than we go to the architectural design, the formal specification and then high level design.
+
+48:17.000 --> 48:25.000
+ It is intermingled as we can see.
+
+48:25.000 --> 48:30.000
+ Benefits of formal specification.
+
+48:30.000 --> 48:36.000
+ Developing a formal specification requires the system requirements to be analyzed in detail.
+
+48:36.000 --> 48:42.000
+ This helps to detect problems in consistencies and in completeness in the requirements.
+
+48:42.000 --> 48:51.000
+ As the specification is expressed in a formal language, it can be automatically analyzed to discover in consistencies and in completeness.
+
+48:51.000 --> 48:59.000
+ If you use a formal method such as the B method, you can transform the formal specification into a correct program.
+
+48:59.000 --> 49:07.000
+ Program testing costs may be reduced if the program is formally verified against its specification.
+
+49:07.000 --> 49:15.000
+ Okay, that is B method. Let's check it out.
+
+49:15.000 --> 49:26.000
+ The B method is a method of software development based on B, a tool supported formal method based on an abstract machine notation used in the development of computer software.
+
+49:26.000 --> 49:33.000
+ It was originally developed in the 1980s by Gene Raymond Abriel, one in France and the UK.
+
+49:33.000 --> 49:42.000
+ B is related to the Z notation, also originated by Abriel and supports development of programming language code from specifications.
+
+49:42.000 --> 49:53.000
+ B has been used in major safety critical system applications in Europe, such as the automatic Paris Metro lines 14 and one in the Ariane 5 rocket.
+
+49:53.000 --> 50:01.000
+ It has robust, commercially available tool support for specification, design, proof and code generation.
+
+50:01.000 --> 50:08.000
+ Let's look for a let's try to find some images.
+
+50:08.000 --> 50:20.000
+ Of B methods, okay.
+
+50:20.000 --> 50:32.000
+ No, not this one.
+
+50:32.000 --> 50:50.000
+ What kind of tool it is? I'm trying to find.
+
+50:50.000 --> 51:06.000
+ The B method tool, let's find images to that.
+
+51:06.000 --> 51:14.000
+ Okay, anyway, we have the idea of what it is.
+
+51:14.000 --> 51:20.000
+ Acceptance of formal methods.
+
+51:20.000 --> 51:32.000
+ Formal methods have had limited impact on practical software development, problem owners cannot understand a formal specification and so cannot assess if it is an accurate representation of their requirements.
+
+51:32.000 --> 51:39.000
+ It is easy to assess the costs of developing a formal specification but harder to assess the benefits.
+
+51:39.000 --> 51:50.000
+ Managers may therefore be unwilling to invest in formal methods, software engineers are unfamiliar with this approach and are therefore reluctant to propose the use of FM.
+
+51:50.000 --> 51:55.000
+ Formal methods are still hard to scale up to large systems.
+
+51:55.000 --> 52:00.000
+ Formal specification is not really compatible with agile development methods.
+
+52:00.000 --> 52:08.000
+ Okay, the key point of the part 2, that's recap.
+
+52:08.000 --> 52:12.000
+ Reliability requirements can be defined quantitatively.
+
+52:12.000 --> 52:21.000
+ They include probability of failure on demand, P-O-F-O-D, rate of occurrence of failure, R-O-C-O-F, and availability available.
+
+52:21.000 --> 52:35.000
+ Security requirements are more difficult to identify than safety requirements because a system attacker can use knowledge of system vulnerabilities to plan a system attack and can learn about vulnerabilities from unsuccessful attacks.
+
+52:35.000 --> 52:46.000
+ To specify security requirements, you should identify the assets that are to be protected and define how security techniques and technology should be used to protect these assets.
+
+52:46.000 --> 52:54.000
+ Formal methods of software development rely on a system specification that is expressed as a mathematical model.
+
+52:54.000 --> 53:00.000
+ The use of formal methods avoids ambiguity in a critical system specification.
+
+53:00.000 --> 53:07.000
+ All right, I think this is enough for this week, and let's update the final project file as well.
+
+53:07.000 --> 53:11.000
+ Okay.
+
+53:11.000 --> 53:17.000
+ I assume that you have already started the project.
+
+53:17.000 --> 53:29.000
+ You know, you can also use some of your other projects and prepare this software engineering strategies.
+
+53:29.000 --> 53:33.000
+ That you are expecting from you.
+
+53:33.000 --> 53:47.000
+ Okay. Okay. Okay. Let's upload our lecture update at final project file.
+
+54:04.000 --> 54:19.000
+ Oh, by the way, before we do an update, I will not be asked as well.
+
+54:19.000 --> 54:30.000
+ Yeah, let's update version and the date.
+
+54:30.000 --> 54:37.000
+ Okay. I think we can actually be fine.
+
+54:37.000 --> 54:41.000
+ Or maybe let's find it like this.
+
+54:41.000 --> 55:05.000
+ Okay.
+
+55:11.000 --> 55:29.000
+ All right. End of lecture, hopefully see you next week.
+

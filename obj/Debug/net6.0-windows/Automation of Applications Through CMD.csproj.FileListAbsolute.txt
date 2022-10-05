@@ -1,0 +1,21 @@
+C:\Users\King\Desktop\Automation of Applications Through CMD\bin\Debug\net6.0-windows\Automation of Applications Through CMD.exe
+C:\Users\King\Desktop\Automation of Applications Through CMD\bin\Debug\net6.0-windows\Automation of Applications Through CMD.deps.json
+C:\Users\King\Desktop\Automation of Applications Through CMD\bin\Debug\net6.0-windows\Automation of Applications Through CMD.runtimeconfig.json
+C:\Users\King\Desktop\Automation of Applications Through CMD\bin\Debug\net6.0-windows\Automation of Applications Through CMD.dll
+C:\Users\King\Desktop\Automation of Applications Through CMD\bin\Debug\net6.0-windows\Automation of Applications Through CMD.pdb
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.csproj.AssemblyReference.cache
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD_MarkupCompile.cache
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD_MarkupCompile.lref
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.g.resources
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.AssemblyInfoInputs.cache
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.AssemblyInfo.cs
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.csproj.CoreCompileInputs.cache
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.dll
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\refint\Automation of Applications Through CMD.dll
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.pdb
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\Automation of Applications Through CMD.genruntimeconfig.cache
+C:\Users\King\Desktop\Automation of Applications Through CMD\obj\Debug\net6.0-windows\ref\Automation of Applications Through CMD.dll
